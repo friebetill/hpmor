@@ -18,3 +18,15 @@
 \phantomsection% For the 'contents' label to point here
 \label{contents}
 \tableofcontents*
+
+
+% Allows quotations marks in lettrines, https://tex.stackexchange.com/a/609553
+\newcommand\loq{%
+  \sbox0{T}%
+  \sbox2{%
+    \dimen0=\csname f@size\endcsname pt
+    \dimen0=0.6\dimen0 % adjust the factor to suit
+    \fontsize{\dimen0}{0}\selectfont "%
+  }%
+  \raisebox{\dimexpr\ht0-\ht2}{\usebox{2}}%
+}

@@ -52,33 +52,33 @@
 %
 % Custom chapter style
 %
-\makeatletter 
+\makeatletter
 \makechapterstyle{evans}{%
 	\renewcommand*{\chapnamefont}{\hpchap\normalsize}
 	\renewcommand*{\chapnumfont}{\chapnamefont\normalsize}
 	\renewcommand*{\chaptitlefont}{\hp\Large}
-	
+
 	\setlength{\beforechapskip}{2\baselineskip plus 1\baselineskip minus 1\baselineskip }
 	\setlength{\midchapskip}{0pt}
 	\setlength{\afterchapskip}{1\baselineskip}
-	
+
 	\renewcommand*{\printchapternum}{%
 		\begin{center} \chapnumfont \hyperref[contents]{CHAPTER \NUMTONAME{\thechapter}\end{center}
 %\IfInteger{\thechapter}{\NUMTONAME{\thechapter}}{\thechapter}
 }}
 	% \renewcommand*{\printchapternonum}{%
 		% \chapnumfont \hyperref[contents]{Something no num}}
-	
+
 	\renewcommand*{\printchaptername}{%
 %		\centering \chapnamefont \hyperref[contents]{\MakeUppercase{\@chapapp}}
 	}
-	
+
 	\renewcommand*{\printchaptertitle}[1]{%
-		\vskip 1cm 
+		\vskip 1cm
 		\begin{center}\chaptitlefont \MakeUppercase{##1}\end{center}\par
 		\vskip 1cm
 	}
-	
+
 	\renewcommand*{\chaptermark}[1]{
 		\markboth{
                   \MakeUppercase{##1}
@@ -94,11 +94,11 @@
         }
 
 	\renewcommand*{\tocmark}{\markboth{}{\MakeUppercase{Contents}}}
-	
+
 	\renewcommand{\tocheadstart}{\chapterheadstart}
 	\renewcommand{\aftertoctitle}{\thispagestyle{empty}\afterchaptertitle}
 
-  % \renewcommand*{\afterchapternum}{\par\nobreak\vskip 25pt} 
+  % \renewcommand*{\afterchapternum}{\par\nobreak\vskip 25pt}
   % \def\chapterheadstart{\vspace*{\beforechapskip}}%
   % \def\printchaptername{\chapnamefont \@chapapp}%
   % \def\chapternamenum{\space}%
