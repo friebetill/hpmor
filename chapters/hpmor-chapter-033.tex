@@ -1,1244 +1,1172 @@
-\partchapter{Coordination Problems}{1}
-
-\lettrine{T}{he} terrifying part was how fast the whole thing had spiraled out of control.
-
-"Albus," Minerva said, not even trying to keep the worry out of her voice as
-the two of them entered the Great Hall, "something has to be done."
-
-The atmosphere at Hogwarts before Yuletide was usually bright and cheerful. The
-Great Hall had already been decorated in green and red, after a Slytherin and a
-Gryffindor whose Yule wedding had become a symbol of friendship transcending
-Houses and allegiances, a tradition almost as ancient as Hogwarts itself and
-which had even spread to Muggle countries.
-
-Now the students eating dinner were glancing nervously over their shoulders, or
-sending vicious glares at other tables, or at some tables arguing heatedly. You
-could have described the atmosphere as \emph{tense,} perhaps, but the phrase
-coming to Minerva's mind was \emph{fifth degree of caution.}
-
-Take a school, into four Houses divided{\el}
-
-Now into each year, add three armies at war.
-
-And the partisanship of Dragon and Sunshine and Chaos had spread beyond the
-first-years; they had become the armies for those who had no armies. Students
-were wearing armbands with insignia of fire or smile or upraised hand, and
-hexing each other in the corridors. All three first-year generals had told them
-to stop---even Draco Malfoy had heard her out and then nodded grimly---but
-their supposed followers hadn't listened.
-
-Dumbledore gazed out at the tables with a distant look. "\emph{In every city,}"
-the old wizard quoted softly, "\emph{the population has been divided for a long
-time past into the Blue and the Green factions{\el} And they fight against
-their opponents knowing not for what end they imperil themselves{\el} So
-there grows up in them against their fellow men a hostility which has no cause,
-and at no time does it cease or disappear, for it gives place neither to the
-ties of marriage nor of relationship nor of friendship, and the case is the
-same even though those who differ with respect to these colors be brothers or
-any other kin. I, for my part, am unable to call this anything except a disease
-of the soul{\el}}"
+\chapter{Koordinationsprobleme, Teil 1}
+
+\emph{Zitat Original Autor: Die in diesem Kapitel verwendete Version der
+Entscheidungstheorie ist nicht die akademisch dominante. Sie basiert auf etwas,
+das sich \glqq zeitlose Entscheidungstheorie\grqq{} nennt und unter anderem von
+Gary Drescher, Wei Dai, Vladimir Nesov und, nun ja... mir entwickelt wird.
+(hustet ein paar Mal).}
+
+
+\emph{Das Erschreckende war, wie schnell die ganze Sache außer Kontrolle geraten war.}
+
+\glqq Albus\grqq{}, sagte Minerva und versuchte nicht einmal, die Sorge aus
+ihrer Stimme zu halten, als die beiden die Große Halle betraten, \glqq es muss
+etwas geschehen."
+
+Die Atmosphäre in Hogwarts vor der Weihnachtszeit war normalerweise hell und
+fröhlich. Die Große Halle war bereits in Grün und Rot geschmückt worden, nach
+einem Slytherin und einem Gryffindor, deren Weihnachtshochzeit zu einem Symbol
+der Freundschaft über die Häuser und Loyalitäten hinweg geworden war, eine
+Tradition, die fast so alt war wie Hogwarts selbst und die sich sogar bis in die
+Muggelländer verbreitet hatte. Die Schüler, die jetzt zu Abend aßen, warfen sich
+nervöse Blicke über die Schultern oder schickten böse Blicke an andere Tische,
+oder an manchen Tischen wurde heftig gestritten. Man hätte die Atmosphäre
+vielleicht als angespannt bezeichnen können, aber der Ausdruck, der Minerva in
+den Sinn kam, war \emph{fünfter Grad der Vorsicht.} Man nehme eine Schule,
+unterteilt in vier Häuser... Nun füge in jedes Jahr drei Armeen im Krieg hinzu.
+Und die Parteilichkeit von Drache und Sonnenschein und Chaos hatte sich über die
+Erstklässler hinaus verbreitet; sie waren zu den Armeen für diejenigen geworden,
+die keine Armeen hatten.
+
+Schüler trugen Armbinden mit Insignien des Feuers oder des Lächelns oder der
+erhobenen Hand und verhexten sich gegenseitig in den Korridoren. Alle drei
+Erstklässler hatten ihnen gesagt, sie sollten aufhören - sogar Draco Malfoy
+hatte sie angehört und dann grimmig genickt -, aber ihre vermeintlichen
+Gefolgsleute hatten nicht auf sie gehört.
+
+Dumbledore blickte mit einem distanzierten Blick auf die Tische hinaus. \glqq In
+jeder Stadt\grqq{}, zitierte der alte Zauberer leise, \glqq ist die Bevölkerung
+seit langem in die Blaue und die Grüne Fraktion gespalten... Und sie kämpfen
+gegen ihre Gegner, ohne zu wissen, zu welchem Zweck, sie gefährden sich selbst
+... So wächst in ihnen eine Feindseligkeit gegen ihre Mitmenschen heran, die
+keine Ursache hat und zu keiner Zeit aufhört oder verschwindet, denn sie gibt
+weder den Banden der Ehe noch der Verwandtschaft noch der Freundschaft Raum, und
+der Fall ist derselbe, auch wenn die, die sich in Bezug auf diese Farben
+unterscheiden, Brüder oder andere Verwandte sind. Ich für meinen Teil bin nicht
+in der Lage, dies etwas anderes zu nennen als eine Krankheit der Seele ..."
+
+\glqq Es tut mir leid\grqq{}, sagte Minerva, \glqq ich weiß nicht -"
+
+\glqq Procopius\grqq{}, sagte Dumbledore. \glqq Die haben ihre Wagenrennen sehr
+ernst genommen, im Römischen Reich. Ja, Minerva, ich stimme zu, dass etwas getan
+werden muss."
+
+\glqq Bald\grqq{}, sagte Minerva, und ihre Stimme senkte sich noch weiter. \glqq
+Albus, ich denke, es muss vor Samstag geschehen."
+
+Am Sonntag würden die meisten Schüler Hogwarts verlassen, um die Feiertage bei
+ihren Familien zu verbringen; am Samstag war dann die letzte Schlacht der drei
+Erstklässlerarmeen, die über die Vergabe von Professor Quirrells dreifach
+verfluchtem Weihnachtswunsch entscheiden würde.
+
+Dumbledore blickte zu ihr hinüber und musterte sie ernsthaft. \glqq Du
+befürchtest, dass es dann zur Explosion kommt und jemand verletzt wird."
+
+Minerva nickte.
+
+\glqq Und dass man Professor Quirrell die Schuld geben wird."
+
+Minerva nickte wieder, ihr Gesicht war angespannt. Sie hatte sich schon längst
+damit abgefunden, dass Verteidigungsprofessoren gefeuert wurden. \glqq
+Albus\grqq{}, sagte Minerva, \glqq wir können Professor Quirrell jetzt nicht
+verlieren, das können wir nicht! Wenn er nur bis Januar bleibt, werden unsere
+Fünftklässler ihre Z.A.G. bestehen, wenn er bis März bleibt, werden unsere
+Siebtklässler ihre U.T.Z bestehen, er macht Jahre der Vernachlässigung in
+Monaten wieder gut, eine ganze Generation wird aufwachsen, die sich trotz des
+Fluchs des Dunklen Lords verteidigen kann - du musst den Kampf beenden, Albus!
+Verbiete die Armeen sofort!"
+
+\glqq Ich bin mir nicht sicher, ob der Verteidigungsprofessor das wohlwollend
+aufnehmen würde\grqq{}, sagte Dumbledore und blickte zum Haupttisch hinüber, wo
+Quirrell in seine Suppe sabberte. \glqq Er scheint sehr an seinen Armeen zu
+hängen, obwohl ich, als ich zustimmte, dachte, dass es in jedem Jahr vier sein
+würden." Der alte Zauberer seufzte. \glqq Ein kluger Mann, wahrscheinlich mit
+den besten Absichten; aber vielleicht nicht klug genug, fürchte ich. Und die
+Armeen zu verbieten, könnte auch die Explosion auslösen."
+
+\glqq Aber dann Albus, was wirst du tun?"
+
+Der alte Zauberer schenkte ihr ein wohlwollendes Lächeln. \glqq Nun, ich werde
+natürlich ein Komplott schmieden. Das ist die neue Mode in Hogwarts."
+
+Und sie waren zu nahe an den Haupttisch gekommen, als dass Minerva noch etwas
+hätte sagen können.
+
+
+\emph{ Das Erschreckende war, wie schnell die ganze Sache außer Kontrolle
+geraten war.} Die erste Schlacht im Dezember war... chaotisch gewesen, zumindest
+hatte Draco das gehört. Die zweite Schlacht war derangiert gewesen. Und die
+nächste würde noch schlimmer werden, es sei denn, den dreien zusammen gelang ein
+letzter verzweifelter Versuch, sie aufzuhalten.
+
+\glqq Professor Quirrell, das ist Irrsinn\grqq{}, sagte Draco barsch. \glqq Das
+ist nicht mehr Slytherin, das ist einfach ...\grqq{} Draco fand keine Worte
+mehr. Er fuchtelte hilflos mit den Händen. \glqq Man kannst unmöglich richtige
+Pläne schmieden, bei all dem, was hier los ist. Bei der letzten Schlacht hat
+einer meiner Soldaten seinen eigenen Selbstmord vorgetäuscht. Wir haben
+Hufflepuffs, die versuchen zu intrigieren, und sie denken, sie können es, aber
+sie können es nicht. Die Dinge passieren jetzt einfach zufällig, es hat nichts
+damit zu tun, wer der Klügste ist oder welche Armee am besten kämpft, es
+ist...\grqq{} Er konnte es nicht einmal beschreiben.
+
+\glqq Ich stimme Mr. Malfoy zu\grqq{}, sagte Granger in dem Tonfall von
+jemandem, der nicht erwartet hatte, sich selbst jemals diese Worte sagen zu
+hören. \glqq Verräter zuzulassen, funktioniert nicht, Professor Quirrell."
+
+Draco hatte versucht, jedem in seiner Armee zu verbieten, sich zu verschwören,
+außer ihm, und das hatte die Verschwörungen nur in den Untergrund getrieben,
+niemand wollte außen vor bleiben, wenn die Soldaten in anderen Armeen sich
+verschwören konnten. Nachdem er ihre letzte Schlacht kläglich verloren hatten,
+hatte er schließlich nachgegeben und sein Dekret widerrufen; aber da hatten
+seine Soldaten bereits begonnen, ihre eigenen persönlichen Pläne in die Tat
+umzusetzen, ohne irgendeine Art von zentraler Koordination. Nachdem ihm alle
+Pläne mitgeteilt worden waren, oder das, was seine Soldaten behaupteten, ihre
+Pläne zu sein, hatte Draco versucht, einen Plan zu entwerfen, um die letzte
+Schlacht zu gewinnen. Es hatte wesentlich mehr als drei verschiedene Dinge
+gebraucht, um richtig zu sein, und Draco hatte Incendio auf dem Papier und
+Everto benutzt, um die Asche verschwinden zu lassen, denn wenn Vater es gesehen
+hätte, wäre er enterbt worden.
+
+Professor Quirrells Augenlider waren halb geschlossen, sein Kinn ruhte auf
+seinen Händen, während er sich nach vorne auf seinen Schreibtisch lehnte. \glqq
+Und Sie, Mr. Potter?\grqq{}, fragte der Verteidigungsprofessor. \glqq Sind Sie
+ebenfalls damit einverstanden?"
+
+\glqq Wir bräuchten nur Franz Ferdinand zu erschießen, und wir könnten den
+Ersten Weltkrieg beginnen\grqq{}, sagte Harry. \glqq Es herrscht das totale
+Chaos. Ich bin voll dafür."
+
+\glqq Harry!\grqq{}, sagte Draco völlig schockiert. Er bemerkte erst eine
+Sekunde später, dass er es genau zur gleichen Zeit und in genau dem gleichen Ton
+der Empörung gesagt hatte wie Granger. Granger warf ihm einen erschrockenen
+Blick zu, und Draco hielt sein Gesicht sorgfältig neutral.
+
+\emph{Ups}.
+
+\glqq Das stimmt!\grqq{}, sagte Harry. \glqq Ich hintergehe euch! Euch beide!
+Schon wieder! Ha ha!"
+
+Professor Quirrell lächelte dünn, obwohl seine Augen immer noch halb geschlossen
+waren. \glqq Und warum ist das so, Mr. Potter?"
+
+\glqq Weil ich glaube, dass ich mit dem Chaos besser umgehen kann als Miss
+Granger oder Mr. Malfoy\grqq{}, sagte der Verräter. \glqq Unser Krieg ist ein
+Nullsummenspiel, und es kommt nicht darauf an, ob er im absoluten Sinne leicht
+oder schwer ist, sondern nur, wer besser oder schlechter abschneidet.\grqq{}
+
+\emph{Harry Potter lernte viel zu schnell.}
+
+Professor Quirrells Augen bewegten sich unter ihren Lidern, um Draco und dann
+Granger zu betrachten. \glqq In Wahrheit, Mr. Malfoy, Miss Granger, könnte ich
+einfach nicht mit mir selbst leben, wenn ich das große Debakel vor seinem
+Höhepunkt beenden würde. Einer Ihrer Soldaten ist sogar ein Vierfachagent
+geworden."
+
+\glqq Vierfach?!\grqq{}, sagte Granger. \glqq Aber es gibt doch nur drei Seiten
+in diesem Krieg!"
+
+\glqq Ja\grqq{}, sagte Professor Quirrell, \glqq das könnte man meinen, oder?
+Ich bin mir nicht sicher, ob es jemals in der Geschichte einen Vierfachagenten
+gegeben hat, oder eine Armee mit einem so hohen Anteil an echten und
+vermeintlichen Verrätern. Wir erforschen neue Gefilde, Miss Granger, und wir
+können jetzt nicht mehr umkehren."
+
+Draco verließ das Büro des Verteidigungsprofessors mit hart aufeinander
+knirschenden Zähnen, und Granger blickte noch verärgerter neben ihm her.
+
+\glqq Ich kann nicht glauben, dass du das getan hast, Harry!\grqq{}, sagte
+Granger.
+
+\glqq Tut mir leid\grqq{}, sagte Harry, wobei es überhaupt nicht nach
+Entschuldigung klang, seine Lippen waren zu einem fröhlichen, bösen Lächeln
+geschwungen. \glqq Denk daran, Hermine, es ist nur ein Spiel, und warum sollten
+Generäle wie wir die Einzigen sein, die sich verschwören dürfen? Und außerdem,
+was wollt ihr zwei denn machen? Sich gegen mich verbünden?"
+
+Draco tauschte einen Blick mit Granger und wusste, dass sein eigenes Gesicht
+genauso angespannt war wie ihres. Harry hatte sich immer offener und
+schadenfroher auf Dracos Weigerung verlassen, mit einem Schlammblut gemeinsame
+Sache zu machen; \emph{und Draco wurde es allmählich leid, dass das gegen ihn
+verwendet wurde.}
+\emph{ }
+\emph{Wenn das noch länger so weiterging, würde er sich mit Granger verbünden, nur um Harry Potter zu zermalmen, und um zu sehen, wie sehr dem Sohn eines Schlammbluts das gefiel.}
+
+
+\emph{Das Erschreckende daran war, wie schnell die ganze Sache außer Kontrolle geraten war.}
+Hermine starrte auf das Pergament, das Zabini ihr gegeben hatte, und fühlte sich
+absolut und völlig hilflos. Da waren Namen, und Linien, die die Namen mit
+anderen Namen verbanden, und einige der Linien waren in verschiedenen Farben
+und...
+
+\glqq Sagen Sie mir\grqq{}, sagte General Granger, \glqq gibt es jemanden in
+meiner Armee, der kein Spion ist?"
+
+Die beiden befanden sich nicht im Büro, sondern in einem anderen, verlassenen
+Klassenzimmer, und sie waren allein; denn, so hatte Oberst Zabini gesagt, es war
+inzwischen fast sicher, dass mindestens einer der Hauptleute ein Verräter war.
+Wahrscheinlich Hauptmann Goldstein, aber Zabini wusste es nicht genau. Ihre
+Frage hatte ein ironisches Lächeln auf das Gesicht des jungen Slytherins
+gezaubert. Blaise Zabini schien sie immer ein wenig zu verachten, aber er schien
+sie nicht aktiv abzulehnen; nichts im Vergleich zu der Verachtung, die er für
+Draco Malfoy hegte, oder dem Groll, den er für Harry Potter entwickelt hatte.
+Zuerst hatte sie sich Sorgen gemacht, dass Zabini sie verraten könnte, aber der
+Junge schien verzweifelt zu zeigen, dass die anderen beiden Generäle nicht
+besser waren als er; und Hermine dachte, dass Zabini zwar wahrscheinlich froh
+wäre, sie an irgendjemand anderen zu verraten, aber er würde Malfoy oder Harry
+niemals gewinnen lassen.
+
+\glqq Die meisten Ihrer Soldaten sind immer noch loyal zu Ihnen, da bin ich mir
+ziemlich sicher\grqq{}, sagte Zabini. \glqq Es ist nur so, dass niemand aus dem
+Spaß herausgelassen werden will.\grqq{} Der verächtliche Blick auf dem Gesicht
+des Slytherins machte deutlich, was er von Leuten hielt, die Verschwörungen
+nicht ernst nahmen. \glqq Also denken sie, sie könnten Doppelagenten sein und
+heimlich für unsere Seite arbeiten, während sie vorgeben, uns zu verraten."
+
+\glqq Und das würde auch für jeden in den anderen Armeen gelten, der sagt, er
+wolle unser Spion sein\grqq{}, sagte Hermine vorsichtig.
+
+Der junge Slytherin zuckte mit den Schultern. \glqq Ich glaube, ich kann gut
+einschätzen, wer Malfoy wirklich verraten will, ich bin mir nicht sicher, ob
+irgendjemand Potter wirklich an dich verraten will. Aber Nott ist ein sicherer
+Tipp, um Potter an Malfoy zu verraten, und da ich Entwhistle angeblich im
+Auftrag von Malfoy an ihn herantreten ließ und Entwhistle wirklich an uns
+berichtet, ist das fast so gut -"
+
+Hermine schloss für einen Moment die Augen. \glqq Wir werden verlieren, nicht
+wahr?"
+
+\glqq Sieh mal\grqq{}, sagte Zabini geduldig, \glqq du bist im Moment in
+Führung, was Quirrell-Punkte angeht. Wir müssen nur diesen letzten Kampf nicht
+komplett verlieren, dann haast du genug Quirrell-Punkte, um den Weihnachtswunsch
+zu gewinnen."
+
+Professor Quirrell hatte angekündigt, dass das letzte Gefecht nach einem
+formalen Punktesystem ablaufen würde, was man von ihm verlangt hatte, um spätere
+Schuldzuweisungen zu vermeiden. Jedes Mal, wenn man jemanden erschoss, bekam der
+General der eigenen Armee zwei Quirrell-Punkte. Ein Gong würde durch das
+Kampfgebiet läuten (sie wussten noch nicht, wo sie kämpfen würden, obwohl
+Hermine wieder auf den Wald hoffte, wo Sonnenschein gut abschnitt) und sein Ton
+würde verraten, welche Armee die Punkte gewonnen hatte. Und wenn jemand
+vortäuschen würde, getroffen worden zu sein, würde der Gong trotzdem ertönen,
+und dann würde später, nach keiner festgelegten Zeit, ein doppelter Gong
+ertönen, um den Rückzug zu begrüßen. Und wenn man den Namen einer Armee rief,
+\glqq Für Sonnenschein!\grqq{} oder \glqq Für Chaos!\grqq{} oder \glqq Für
+Drache!\grqq{}, wechselte man die Zugehörigkeit zu dieser Armee.
+
+.. Selbst Hermine hatte den Fehler in diesem Regelwerk erkennen können. Aber
+Professor Quirrell hatte weiter verkündet, dass, wenn man ursprünglich
+Sonnenschein zugewiesen worden war, niemand auf einen im Namen von Sonnenschein
+schießen konnte - oder besser gesagt, sie konnten es, aber dann verlor
+Sonnenschein einen einzigen Quirrell-Punkt, symbolisiert durch einen dreifachen
+Gong. Das hinderte einen daran, seine eigenen Soldaten für Punkte zu erschießen,
+und riet davon ab, Selbstmord zu begehen, bevor der Feind einen erwischte, aber
+man konnte immer noch Spione erschießen, wenn man es musste.
+
+Im Moment hatte Hermine zweihundertvierundvierzig Quirrell-Punkte, und Malfoy
+hatte zweihundertneunzehn, und Harry hatte zweihunderteinundzwanzig; und es gab
+vierundzwanzig Soldaten in jeder Armee.
+
+\glqq Also kämpfen wir vorsichtig\grqq{}, sagte Hermine, \glqq und versuchen
+einfach, nicht allzu sehr zu verlieren."
+
+\glqq Nein\grqq{}, sagte Zabini. Das Gesicht des jungen Slytherins war jetzt
+ernst. \glqq Das Problem ist, dass sowohl Malfoy als auch Potter wissen, dass
+sie nur gewinnen können, wenn sie sich zusammenschließen und uns zerquetschen
+und dann alleine kämpfen. Ich denke also, wir sollten Folgendes tun -"
+
+Hermine verließ das Klassenzimmer in einer Art Benommenheit. Zabinis Plan war
+nicht der offensichtliche gewesen, er war seltsam und kompliziert und
+vielschichtig und die Art von Sache, von der sie erwartet hätte, dass Harry sie
+sich ausdenkt, nicht Zabini. Es fühlte sich falsch an, dass nur sie in der Lage
+war, so einen Plan zu verstehen. Junge Mädchen sollten nicht in der Lage sein,
+solche Pläne zu verstehen. Der Hut hätte sie nach Slytherin sortiert, wenn er
+gesehen hätte, dass sie solche Pläne verstehen konnte.
+
+
+\emph{.. Das Erstaunliche war, wie schnell er das Chaos hatte eskalieren lassen, sobald er es absichtlich getan hatte.}
+Harry saß in seinem Büro; er hatte die Befugnis erhalten, Möbel bei den
+Hauselfen zu bestellen, also hatte er einen Thron bestellt und Vorhänge in einem
+schwarz-scharlachroten Muster. Scharlachrotes Licht wie Blut, vermischt mit
+Schatten, ergoss sich über den Boden.
+
+\emph{Irgendetwas in Harry fühlte sich an, als wäre er endlich nach Hause gekommen.}
+
+Vor ihm standen die vier Leutnants des Chaos, seine treuesten Gefolgsleute, von
+denen einer ein Verräter war.\emph{ Das hier. So sollte das Leben sein.}
+
+\glqq Wir sind versammelt\grqq{}, sagte Harry. \glqq Lasst das Chaos
+regieren\grqq{}, riefen seine vier Leutnants im Chor. \glqq Mein
+Luftkissenfahrzeug ist voll mit Aalen\grqq{}, sagte Harry. \glqq Ich kaufe diese
+Platte nicht, sie ist zerkratzt\grqq{}, sagten seine vier Leutnants im Chor.
+\glqq Ganz mimsy waren die Borogroves." \glqq Und die Klosterratten wühlen im
+Müll!"
+
+Damit waren die Formalitäten abgeschlossen.
+
+\glqq Was macht die Verwirrung?\grqq{} sagte Harry in einem trockenen Flüsterton
+wie Imperator Palpatine.
+
+\glqq Es läuft gut, General Chaos\grqq{}, sagte Neville in dem Ton, den er immer
+für militärische Angelegenheiten verwendete, ein Ton, der so tief war, dass der
+Junge oft innehalten und husten musste. Der chaotische Leutnant war ordentlich
+in seine schwarze Schulrobe gekleidet, die mit dem Gelb des Hufflepuff-Hauses
+getrimmt war, und sein Haar war gescheitelt und gekämmt im üblichen Look für
+einen ernsten Jungen. Harry hatte die Inkongruenz besser gefallen als jeder der
+Umhänge, die sie ausprobiert hatten.
+
+\glqq Unsere Legionäre haben seit gestern Abend fünf neue Verschwörungen
+begonnen."
+
+Harry lächelte böse. \glqq Hat einer von ihnen eine Chance, zu funktionieren?"
+
+\glqq Das glaube ich nicht\grqq{}, sagte Neville von Chaos. \glqq Hier ist der
+Bericht."
+
+\glqq Ausgezeichnet\grqq{}, sagte Harry und lachte schallend, als er Neville das
+Pergament aus der Hand nahm, wobei er sein Bestes gab, damit es so klang, als
+würde er an Staub ersticken. Das brachte die Gesamtzahl auf sechzig.
+
+\emph{Soll Draco doch versuchen, damit umzugehen. Soll er's doch versuchen.}
+
+Und was Blaise Zabini angeht... Harry lachte wieder, und diesmal gab er sich
+nicht einmal Mühe, böse zu klingen. Er musste sich wirklich mal das Haustier von
+jemandem ausleihen, damit er eine Katze zum Streicheln hatte, während er das
+hier machte.
+
+\glqq Kann die Legion jetzt aufhören, Verschwörungen zu machen?\grqq{}, sagte
+Finnigan of Chaos. \glqq Ich meine, haben wir nicht schon genug -"
+
+\glqq Nein\grqq{}, sagte Harry mit Nachdruck. \glqq Wir können nie genug
+Verschwörungen haben."
+
+Professor Quirrell hatte es perfekt ausgedrückt. Sie waren dabei, die Grenzen
+weiter zu verschieben, als sie vielleicht jemals verschoben worden waren; und
+Harry hätte nicht mit sich selbst leben können, wenn er jetzt umgedreht hätte.
+
+Es klopfte an der Tür.
+
+\glqq Das wird der Drachengeneral sein\grqq{}, sagte Harry und lächelte mit
+böser Vorahnung. \glqq Er kommt genau dann an, wann ich es erwartet habe. Führt
+ihn herein und euch selbst hinaus."
+
+Und die vier Leutnants des Chaos schlurften hinaus und warfen Draco finstere
+Blicke zu, als der feindliche General Harrys geheimes Versteck betrat.
+
+\emph{ Wenn er das nicht tun durfte, wenn er älter war, würde Harry einfach für immer elf bleiben. }
+
+Die Sonne tropfte durch die roten Vorhänge und schickte Blutstrahlen über den
+Boden hinter Harry Potters gepolstertem Stuhl in Erwachsenengröße, den er mit
+goldenem und silbernem Glitzer überzogen hatte und darauf bestand, ihn als
+seinen Thron zu bezeichnen.
+
+(Draco fühlte sich allmählich viel sicherer, dass er das Richtige getan hatte,
+als er beschloss, Harry Potter zu stürzen, bevor dieser die Weltherrschaft
+übernehmen konnte. Draco konnte sich nicht einmal vorstellen, wie es sein würde,
+unter seiner Herrschaft zu leben.)
+
+\glqq Guten Abend, Drachengeneral\grqq{}, sagte Harry Potter in einem kühlen
+Flüsterton.
+
+\glqq Sie sind genau so eingetroffen, wie ich es erwartet habe."
+
+\emph{ Das war nicht überraschend, wenn man bedenkt, dass Draco und Harry den Zeitpunkt des Treffens im Voraus vereinbart hatten.}
+
+Und es war auch nicht Abend, aber inzwischen wusste Draco es besser, als etwas
+zu sagen. \glqq General Potter\grqq{}, sagte Draco mit so viel Würde, wie ihm
+möglich war, \glqq Sie wissen, dass unsere beiden Armeen zusammenarbeiten
+müssen, damit einer von uns Professor Quirrells Wunsch erfüllen kann, oder?"
+
+\glqq Ja\grqq{}, zischte Harry, als würde der Junge ihn für ein Parselmaul
+halten. \glqq Wir müssen zusammenarbeiten, um Sonnenschein zu vernichten, und
+erst dann können wir es untereinander ausfechten. Aber wenn einer von uns den
+anderen vorher verrät, könnte er sich im späteren Kampf einen Vorteil
+verschaffen. Und der General von Sonnenschein, der das alles weiß, wird
+versuchen, jeden von uns in dem Glauben zu lassen, dass der andere ihn verraten
+hat. Und Sie und ich, die das wissen, werden versucht sein, den anderen zu
+verraten und so zu tun, als sei es Grangers List. Und Granger weiß das auch."
+
+Draco nickte. So viel war klar. \glqq Und ... wir beide wollen nur gewinnen, und
+es gibt niemanden, der einen von uns bestrafen würde, wenn wir überlaufen ..."
+
+\glqq Genau\grqq{}, sagte Harry Potter, sein Gesicht wurde nun ernst. \glqq Wir
+sind mit einem echten Gefangenendilemma konfrontiert."
+
+Das Gefangenendilemma lief nach Harrys Lehren folgendermaßen ab: Zwei Gefangene
+waren in getrennten Zellen eingesperrt worden. Es gab Beweise gegen jeden
+Gefangenen, aber nur geringe Beweise, genug für eine Gefängnisstrafe von zwei
+Jahren für jeden. Jeder Gefangene konnte sich entscheiden, überzulaufen, den
+anderen zu verraten, vor Gericht gegen ihn auszusagen; und das würde ein Jahr
+von der eigenen Gefängnisstrafe abziehen, aber zwei Jahre zu der des anderen
+hinzufügen. Oder ein Gefangener könnte kooperieren und schweigen. Wenn also
+beide Gefangenen überliefen und jeder gegen den anderen aussagte, würden sie
+jeweils drei Jahre verbüßen; wenn beide kooperierten oder schwiegen, würden sie
+jeweils zwei Jahre verbüßen; aber wenn einer überlief und der andere
+kooperierte, würde der Überläufer ein Jahr und der Kooperierende vier Jahre
+verbüßen. Und beide Gefangenen mussten ihre Entscheidung treffen, ohne die Wahl
+des anderen zu kennen, und keiner von ihnen würde eine Chance bekommen, seine
+Entscheidung nachträglich zu ändern.
+
+Draco hatte bemerkt, dass, wenn die beiden Gefangenen während des
+Zaubererkrieges Todesser gewesen wären, der Dunkle Lord jeden Verräter getötet
+hätte.
+
+Harry hatte genickt und gesagt, das sei eine Möglichkeit, das Gefangenendilemma
+zu lösen - und tatsächlich würden beide Todesser wollen, dass es einen Dunklen
+Lord gibt, aus genau diesem Grund.
+
+(Draco hatte Harry gebeten, innezuhalten und ihn eine Weile darüber nachdenken
+zu lassen, bevor sie fortfuhren. Es hatte eine Menge darüber erklärt, warum
+Vater und seine Freunde zugestimmt hatten, unter einem Dunklen Lord zu dienen,
+der oft nicht nett zu ihnen war...)
+
+Tatsächlich, so hatte Harry gesagt, war das so ziemlich der Grund, warum die
+Menschen Regierungen hatten - man war besser dran, wenn man jemand anderen
+bestahl, so wie jeder Gefangene individuell besser dran war, wenn er im
+Gefangenendilemma überlief. Aber wenn jeder so denken würde, würde das Land ins
+Chaos stürzen und jeder wäre schlechter dran, so wie es passieren würde, wenn
+beide Gefangenen überlaufen würden. Also ließen sich die Menschen von
+Regierungen regieren, so wie sich die Todesser vom Dunklen Lord hatten regieren
+lassen.
+
+(Draco hatte Harry gebeten, wieder aufzuhören. Draco war immer davon
+ausgegangen, dass ehrgeizige Zauberer sich an die Macht setzten, weil sie
+herrschen wollten, und die Menschen ließen sich beherrschen, weil sie ängstliche
+kleine Hufflepuffs waren. Und das schien, wenn man darüber nachdachte, immer
+noch wahr zu sein; aber Harrys Perspektive war faszinierend, auch wenn sie
+falsch war.)
+
+Aber, so hatte Harry danach fortgesetzt, die Angst davor, von einem Dritten
+bestraft zu werden, war nicht der einzige mögliche Grund, beim Gefangenendilemma
+zu kooperieren. Angenommen, so hatte Harry gesagt, man würde das Spiel gegen
+eine magisch erzeugte identische Kopie von sich selbst spielen. Draco hatte
+gesagt, wenn es zwei Dracos gäbe, würde natürlich keiner von beiden wollen, dass
+dem anderen etwas Schlimmes zustößt, ganz zu schweigen davon, dass kein Malfoy
+sich als Verräter zu erkennen geben würde.
+
+Harry hatte wieder genickt und gesagt, dass dies eine weitere Lösung für das
+Gefangenendilemma sei - die Leute könnten kooperieren, weil sie sich umeinander
+sorgten, oder weil sie ein Gefühl für Ehre hätten, oder weil sie ihren Ruf
+bewahren wollten. Tatsächlich, so hatte Harry gesagt, war es ziemlich schwierig,
+ein echtes Gefangenendilemma zu konstruieren - im wirklichen Leben sorgten sich
+die Leute normalerweise um die andere Person, oder um ihre Ehre oder um ihren
+Ruf oder um die Strafe eines Dunklen Lords oder um etwas anderes als die
+Gefängnisstrafe. Aber nehmen wir an, die Kopie wäre von jemandem gewesen, der
+völlig egoistisch war - (Pansy Parkinson war das Beispiel gewesen, das sie
+benutzt hatten) - so dass jede Pansy sich nur darum kümmerte, was mit ihr
+geschah und nicht mit der anderen Pansy. Angenommen, das war alles, was Pansy
+interessierte... und dass es keinen Dunklen Lord gab... und dass Pansy sich
+keine Sorgen um ihren Ruf machte... und dass Pansy entweder kein Ehrgefühl hatte
+oder sich der anderen Gefangenen gegenüber nicht verpflichtet fühlte.
+
+... wäre es dann rational, wenn Pansy kooperieren oder überlaufen würde? Einige
+Leute, sagte Harry, behaupteten, dass es rational wäre, wenn Pansy gegen ihre
+Kopie überlief, aber Harry und jemand namens Douglas Hofstadter waren der
+Meinung, dass diese Leute falsch lagen. Denn, so hatte Harry gesagt, wenn Pansy
+überlief - nicht willkürlich, sondern aus Gründen, die ihr rational erschienen -
+dann würde die andere Pansy genau so denken. Zwei identische Kopien würden sich
+nicht unterschiedlich entscheiden. Pansy musste also wählen zwischen einer Welt,
+in der beide Pansys kooperierten, oder einer Welt, in der beide Pansys
+überliefen, und sie war besser dran, wenn beide Kopien kooperierten.
+
+Und wenn Harry gedacht hätte, dass \glqq rationale\grqq{} Menschen im
+Gefangenendilemma überlaufen, dann hätte er nichts getan, um diese Art von \glqq
+Rationalität\grqq{} zu verbreiten, denn ein Land oder eine Verschwörung voller
+\glqq rationaler\grqq{} Menschen würde sich im Chaos auflösen. Man würden seinen
+Feinden von der 'Rationalität' erzählen. Das hatte sich damals alles vernünftig
+angehört, aber jetzt kam Draco der Gedanke, dass...
+
+\glqq Du hast gesagt\grqq{}, sagte Draco, \glqq dass die rationale Lösung des
+Gefangenendilemmas darin besteht, zu kooperieren. Aber du würdest natürlich
+wollen, dass ich das glaube, nicht wahr?" Und wenn Draco zur Kooperation
+überredet würde, würde Harry einfach sagen: \emph{ \glqq Ha ha, wieder
+verraten!\grqq{} } und ihn hinterher darüber auslachen.
+
+\glqq Ich würde dir den Unterricht nicht vorgaukeln\grqq{}, sagte Harry ernst.
+\glqq Aber ich muss dich daran erinnern, Draco, dass ich nicht gesagt habe, dass
+du einfach automatisch kooperieren sollst. Nicht bei einem echten
+Gefangenendilemma wie diesem. Ich habe gesagt, dass du bei deinen Entscheidungen
+nicht denken sollst, als würdest du nur für dich selbst wählen oder als würdest
+du für alle wählen. Du solltest so denken, als würdest du für alle Menschen
+wählen, die dir so ähnlich sind, dass sie wahrscheinlich das Gleiche tun werden
+wie du, aus den gleichen Gründen. Und du sollst auch die Vorhersagen derjenigen
+wählen, die du gut genug kennst, um Sie genau vorherzusagen, so dass du niemals
+bereuen müsstest, dass du aufgrund der korrekten Vorhersagen, die andere Leute
+über dich machen, rational bist - erinner mich daran, irgendwann einmal das
+Newcomb-Problem zu erklären.
+
+Die Frage, die du und ich uns also stellen müssen, Draco, ist folgende: Sind wir
+uns ähnlich genug, dass wir wahrscheinlich das Gleiche tun werden, was auch
+immer es ist, und unsere Entscheidungen größtenteils auf die gleiche Weise
+treffen? Oder kennen wir uns gut genug, um uns gegenseitig vorherzusagen, so
+dass ich vorhersagen kann, ob du kooperieren oder abtrünnig werden wirst, und du
+kannst vorhersagen, dass ich mich entschlossen habe, dasselbe zu tun, wovon ich
+vorhersage, dass du es tun wirst, weil ich weiß, dass du vorhersagen kannst,
+dass ich mich so entscheide?"
+
+...und Draco konnte nicht anders, als zu denken, dass, da er sich anstrengen
+musste, nur um die Hälfte davon zu verstehen, die Antwort offensichtlich
+'\emph{Nein}' war.
+
+\glqq Ja\grqq{}, sagte Draco.
+
+Es gab eine Pause.
+
+\glqq Ich verstehe\grqq{}, sagte Harry und klang enttäuscht. \glqq Oh, na ja.
+Dann müssen wir uns wohl einen anderen Weg einfallen lassen."
+
+\emph{ Draco hatte nicht gedacht, dass das funktionieren würde.}
+
+Draco und Harry sprachen darüber hin und her. Sie hatten sich beide schon viel
+früher darauf geeinigt, dass das, was sie auf dem Schlachtfeld taten, im
+wirklichen Leben nicht als gebrochenes Versprechen zählen würde - obwohl Draco
+ein wenig wütend darüber war, was Harry in Professor Quirrells Büro getan hatte,
+und das auch sagte. Aber wenn die beiden sich nicht auf Ehre oder Freundschaft
+verlassen konnten, blieb die Frage, wie sie ihre Armeen dazu bringen konnten,
+zusammenzuarbeiten, um Sonnenschein zu besiegen, trotz allem, was Granger
+versuchen würde, sie zu trennen. Professor Quirrells Regeln machten es nicht
+verlockend, Sonnenschein die Soldaten der anderen Armee töten zu lassen - das
+erhöhte nur die Hürde, die man selbst überwinden musste -, aber es verleitete
+jede Seite dazu, Kills zu stehlen, anstatt wie eine einzelne Armee zu handeln,
+oder einige der Soldaten der anderen Seite in den Wirren der Schlacht zu
+erschießen.
+
+
+... Hermine ging zurück nach Ravenclaw, ohne wirklich darauf zu achten, wohin
+sie ging, ihr Geist war mit Krieg und Verrat und anderen altersunangemessenen
+Konzepten beschäftigt, und sie bog um eine Ecke und stieß direkt mit einem
+Erwachsenen zusammen.
+
+\glqq Tut mir leid\grqq{}, sagte sie automatisch, und dann, ganz ohne
+nachzudenken, \glqq Iiih!"
+
+\glqq Keine Sorge, Miss Granger\grqq{}, sagte das fröhliche Lächeln, das sich
+unter den funkelnden Augen und über dem silbernen Bart des Schulleiters von
+HOGWARTS abzeichnete. \glqq Es sei Ihnen ganz und gar verziehen."
+
+Ihr Blick war hilflos auf das freundliche Gesicht des mächtigsten Zauberers der
+Welt geheftet, der auch der Oberste Hexenmeister war, der auch der Oberste
+Mugwump war, der vor Jahren durch den Stress des Kampfes gegen den Dunklen Lord
+wahnsinnig geworden war, und zahlreiche andere Fakten, die ihr nacheinander in
+den Sinn kamen, während ihre Kehle immer wieder kleine peinliche Quiekser von
+sich gab.
+
+\glqq In der Tat, Miss Granger\grqq{}, sagte Albus Percival Wulfric Brian
+Dumbledore, \glqq es ist ein ziemlicher Glücksfall, dass wir uns über den Weg
+gelaufen sind. Ich habe mich nämlich gerade neugierig gefragt, was Sie drei wohl
+vorhaben, um Ihre Wünsche zu erfragen …"
+
+
+Der Samstag dämmerte hell und klar, und die Schüler sprachen mit gedämpften
+Stimmen, als ob der erste, der schrie, die Explosion auslösen könnte.
+
+Draco hatte gehofft, dass sie wieder in den oberen Etagen von Hogwarts kämpfen
+würden. Professor Quirrell hatte gesagt, dass echte Kämpfe eher in Städten als
+in Wäldern stattfänden, und Kämpfe in Schulräumen und Korridoren sollten das
+simulieren, mit Bändern, um die erlaubten Bereiche zu markieren. Die
+Drachenarmee hatte sich bei diesen Kämpfen gut geschlagen. Stattdessen hatte
+sich Professor Quirrell, genau wie Draco es befürchtet hatte, für diesen Kampf
+etwas Besonderes einfallen lassen.
+
+Das Schlachtfeld war der Hogwarts-See. Und auch nicht in Booten. Sie kämpften
+unter Wasser. Der Riesenkrake war vorübergehend gelähmt worden; es waren Zauber
+eingesetzt worden, um die Grindylows fernzuhalten; Professor Quirrell hatte mit
+dem Meervolk gesprochen; und alle Soldaten hatten Unterwassertränke erhalten,
+die es ihnen erlaubten, zu atmen, klar zu sehen, miteinander zu reden und nicht
+ganz so schnell zu schwimmen wie ein schneller Spaziergang, indem sie mit den
+Beinen traten.
+
+In der Mitte des Schlachtfeldes hing eine riesige silberne Kugel, die wie ein
+kleiner Unterwassermond leuchtete. Sie würde helfen, einen Orientierungssinn zu
+vermitteln - anfangs. Der Mond würde sich im Laufe des Kampfes langsam
+verfinstern, und wenn es ganz dunkel geworden war, würde der Kampf enden, wenn
+er es nicht schon getan hatte.
+
+Krieg im Wasser. Man konnte keinen Umkreis verteidigen, Angreifer konnten aus
+jeder Richtung auf einen zukommen, und selbst mit dem Trank konnte man in der
+Dunkelheit des Sees nicht sehr weit sehen. Und wenn man zu weit weg vom
+Geschehen schwamm, fing man nach einer Weile an zu leuchten und war leicht zu
+jagen - normalerweise würde Professor Quirrell eine Armee, die sich zerstreut
+und wegläuft, anstatt zu kämpfen, einfach für besiegt erklären; aber heute
+arbeiteten sie mit einem Punktesystem. Natürlich hatte man noch etwas Zeit,
+bevor man zu glühen begann, wenn man Assassine spielen wollte.
+
+Die Drachenarmee war zu Beginn des Spiels tief ins Wasser gesetzt worden;
+darüber und in der Ferne leuchtete der ferne Unterwassermond. Das trübe Wasser
+wurde größtenteils von Lumos-Zaubern beleuchtet, obwohl seine Soldaten die
+Lichter löschen würden, sobald sie ein Manöver begannen. Es hatte keinen Sinn,
+sich vom Feind sehen zu lassen, bevor man ihn gesehen hatte. Draco trat ein paar
+Mal mit den Beinen, was ihn in eine höhere Position brachte, von der aus er auf
+die im Wasser schwebenden Soldaten hinunterblicken konnte. Die Gespräche
+erstarben fast augenblicklich unter Dracos eisigem Blick, seine Soldaten
+blickten mit erfreuten Mienen der Angst und Sorge zu ihm auf.
+
+\glqq Hört mir ganz genau zu\grqq{}, sagte General Malfoy. Seine Stimme kam
+etwas leiser, ein wenig blasig und krächzend daher, aber der Ton kam deutlich
+rüber. \glqq Es gibt nur einen Weg, wie wir das hier gewinnen können. Wir müssen
+zusammen mit Chaos auf Sonnenschein marschieren und Sonnenschein besiegen. Dann
+kämpfen wir es mit Potter aus und gewinnen. Das muss passieren, verstanden?
+Egal, was sonst noch passiert, dieser Teil muss so ablaufen -"
+
+Und Draco erklärte den Plan, den er und Harry sich ausgedacht hatten. Erstaunte
+Blicke wurden unter den Soldaten ausgetauscht.
+
+\glqq - und wenn einer eurer Pläne dem in die Quere kommt\grqq{}, beendete
+Draco, \glqq nachdem wir aus dem Wasser sind, werde ich euch in Brand setzen."
+
+Ein nervöser Chor von \glqq Ja\grqq{} ertönte.
+
+\glqq Und alle, die geheime Befehle haben, sorgen dafür, dass ihr sie
+buchstabengetreu ausführt\grqq{}, sagte Draco.
+
+\emph{ Etwa die Hälfte seiner Soldaten nickte offen, und Draco markierte sie für den Tod, nachdem er die Macht übernommen hatte.}
+
+Natürlich waren alle privaten Befehle gefälscht, wie zum Beispiel, dass ein
+Drache angewiesen wurde, einem anderen Drachen einen falschen Verräterauftrag zu
+geben, und dass der zweite Drache im stillen Vertrauen angewiesen wurde, alles
+zu melden, was der erste Drache sagte.
+
+Draco hatte jedem Drachen gesagt, dass der ganze Krieg von dieser einen Sache
+abhängen könnte, und dass er hoffte, dass sie verstanden, dass das wichtiger war
+als die Pläne, die sie zuvor gemacht hatten. Mit etwas Glück würde das alle
+Idioten bei Laune halten und vielleicht auch ein paar Spione aufscheuchen, wenn
+die Berichte nicht mit den Anweisungen übereinstimmten.
+
+Dracos wirklicher Plan, um gegen das Chaos zu gewinnen... nun, er war einfacher
+als der, den er verbrannt hatte, aber Vater hätte ihn trotzdem nicht gemocht.
+Trotz aller Bemühungen war Draco nicht in der Lage gewesen, sich etwas Besseres
+einfallen zu lassen. Es war ein Komplott, das sich gegen niemanden außer Harry
+Potter hätte richten können. Tatsächlich war es ursprünglich Harrys Plan
+gewesen, wie der Verräter behauptete, obwohl Draco das vermutet hatte, ohne dass
+es ihm gesagt wurde. Draco und der Verräter hatten ihn nur ein wenig
+abgeändert...
+
+
+Harry atmete tief ein und spürte, wie das Wasser harmlos in seiner Lunge
+gluckerte. Sie hatten im Wald gekämpft und er war nicht dazu gekommen, es zu
+sagen. Sie hatten in den Gängen von Hogwarts gekämpft und er war nicht dazu
+gekommen, es zu sagen. Sie hatten in der Luft gekämpft, Besen an jeden Soldaten
+ausgegeben, und es hatte immer noch keinen Sinn gemacht, es zu sagen. Harry
+hatte geglaubt, er würde diese Worte nie sagen können, nicht solange er noch
+jung genug war, um sie wirklich zu hören... Die Chaoslegionäre sahen Harry
+verwundert an, während ihr General mit den Füßen nach oben in Richtung des
+fernen Lichts der Oberfläche schwamm und mit dem Kopf nach unten in die trüben
+Tiefen.
+
+\glqq \textbf{Warum steht ihr auf dem Kopf?}\grqq{}, rief der junge Kommandant
+seiner Armee zu und begann zu erklären, wie man kämpft, nachdem man die
+privilegierte Ausrichtung der Schwerkraft aufgegeben hat.
+
+Eine hohle, dröhnende Glocke hallte durch das Wasser, und im selben Moment
+stürzten Zabini und Anthony und fünf weitere Soldaten nach unten, in die trüben
+Tiefen des Sees. Parvati Patil, die einzige Gryffindor in der Gruppe, drehte
+kurz den Kopf zurück und winkte allen aufmunternd zu, als sie abtauchte; und
+nach einem Moment taten Scott und Matt dasselbe. Der Rest ging einfach unter und
+verschwand. General Granger schluckte einen Kloß im Hals hinunter, als sie ihnen
+nachsah. Sie riskierte alles damit, ihre Armee zu teilen, anstatt einfach zu
+versuchen, so viele feindliche Soldaten wie möglich mitzunehmen.
+
+Die Sache, die sie begreifen musste, Zabini hatte ihr gesagt, war, dass keine
+Armee sich bewegen würde, bevor sie nicht einen Plan hatte, der sie den Sieg
+erwarten ließ. Sonnenschein konnte nicht nur planen, selbst zu gewinnen, sie
+mussten die beiden anderen Armeen glauben lassen, sie würden gewinnen, bis es zu
+spät war.
+
+Ernie und Ron sahen immer noch aus, als stünden sie unter Schock. Susan blickte
+den verschwindenden Soldaten mit einem berechnenden Blick nach. Ihre Armee, das,
+was davon übrig war, sah einfach nur verwirrt aus, Lichtspuren tupften auf ihre
+Uniformen, als sie alle knapp unter der sonnenbeschienenen Oberfläche des Sees
+trieben.
+
+\glqq Was jetzt?\grqq{}, fragte Ron. \glqq Jetzt warten wir\grqq{}, sagte
+Hermine, laut genug, dass alle Soldaten es hören konnten. Es fühlte sich seltsam
+an, mit dem Mund voller Wasser zu sprechen, sie hatte ständig das Gefühl,
+irgendeine schreckliche Unhöflichkeit am Esstisch zu begehen und dabei zu sein,
+sich vollzusabbern.
+
+\glqq Wir alle, die hier übrig sind, werden gezappt werden, aber das wäre
+sowieso passiert, wenn Drache und Chaos sich gegen uns verbünden würden. Wir
+müssen nur so viele wie möglich von ihnen mitnehmen."
+
+\glqq Ich habe einen Plan\grqq{}, sagte einer ihrer Sonnenschein Soldaten...
+Hannah, ihre Stimme war anfangs etwas schwer zu erkennen gewesen. \glqq Es ist
+ziemlich kompliziert, aber ich weiß, wie wir Drache und Chaos dazu bringen
+können, sich gegenseitig zu bekämpfen -"
+
+\glqq Ich auch!\grqq{}, sagte Fay. \glqq Ich habe auch einen Plan! Schau,
+Neville Longbottom ist heimlich auf unserer Seite -"
+
+\glqq Du hast mit Neville geredet?\grqq{}, fragte Ernie.
+
+\glqq Das ist nicht richtig, ich war derjenige, der -"
+
+Daphne Greengrass und ein paar andere Slytherins, die nicht mit Zabini gegangen
+waren, kicherten hilflos, als die Schreie \glqq \emph{Nein, warte, ich war
+derjenige, der Longbottom geholt hat\grqq{} } von einem Soldaten nach dem
+anderen ausbrachen.
+
+Hermine sah sie alle nur müde an. \glqq Okay\grqq{}, sagte Hermine, als sich
+alles gelegt hatte, \glqq hat es jeder verstanden? All eure Verschwörungen
+wurden von der Chaoslegion gefälscht, oder vielleicht auch von Drache. Jeder,
+der Harry oder Malfoy wirklich verraten wollte, ging direkt zu mir oder Zabini,
+nicht zu euch. Vergleicht doch einfach mal all eure geheimen Plots, dann werdet
+ihr es selbst sehen." Sie war vielleicht nicht so gut im Intrigen schieden wie
+Zabini, aber sie konnte immer verstehen, was alle ihre Offiziere ihr sagten,
+deshalb hatte Professor Quirrell sie zum General gemacht.
+
+\glqq Also macht euch nicht die Mühe, irgendwelche Intrigen zu schmieden, wenn
+die anderen Armeen hier ankommen. Kämpft einfach, okay? Bitte?"
+
+\glqq Aber\grqq{}, sagte Ernie mit einem Schock im Gesicht, \glqq Neville ist in
+Hufflepuff! Willst du damit sagen, dass er uns angelogen hat?"
+
+Daphne lachte so sehr und so hilflos, dass die Ausdünstungen sie kopfüber ins
+Wasser geworfen hatten.
+
+\glqq Ich bin mir nicht sicher, was Longbottom ist\grqq{}, sagte Ron düster,
+\glqq aber ich glaube nicht, dass er noch ein Hufflepuff ist. Nicht jetzt, wo
+Harry Potter ihn erwischt hat."
+
+\glqq Weißt du\grqq{}, sagte Susan, \glqq ich habe ihn das gefragt, und Neville
+hat mir gesagt, er sei ein Chaos-Hufflepuff geworden."
+
+\glqq Wie auch immer\grqq{}, sagte Hermine mit lauter Stimme.
+
+\glqq Zabini hat jeden mitgenommen, von dem wir dachten, er sei ein Spion, also
+können wir uns jetzt nicht mehr ganz so streng beobachten, hoffe ich."
+
+\glqq Anthony war ein Spion?\grqq{}, schrie Ron.
+
+\glqq Parvati war eine Spionin?\grqq{}, keuchte Hannah.
+
+\glqq Parvati war auf jeden Fall eine Spionin\grqq{}, sagte Daphne. \glqq Sie
+kaufte im Spionage-Schuhladen ein und trug Spionage-Lippenstift, und eines Tages
+wird sie einen netten Spionage-Ehemann heiraten und eine Menge kleiner Spione
+haben."
+
+Und dann hallte ein Gongton durch das Wasser, der anzeigte, dass Sonnenschein
+gerade zwei Punkte erzielt hatte. Kurz darauf folgte der dreifache Gong, dass
+Drache einen Punkt verloren hatte. Verräter durften keine Generäle töten, nicht
+nach dem Desaster der ersten Schlacht im Dezember, als alle drei Generäle in der
+ersten Minute erschossen worden waren. Aber mit etwas Glück...
+
+\glqq Ach\grqq{}, sagte Hermine. \glqq Es klingt, als würde Mr. Crabbe ein
+kleines Nickerchen machen."
+
+
+Wie zwei Fischschwärme schwammen die Armeen dahin. Neville Longbottom strampelte
+mit seinen Füßen in langsamen, gemessenen Bewegungen. Tauchen, immer tauchen,
+egal, in welche Richtung man sich gerade bewegte. Man wollte dem Feind das
+kleinste Profil zeigen, ihn mit dem Kopf oder den Füßen präsentieren. Man
+tauchte also immer, nach unten und mit dem Kopf voran, und der Feind war immer
+unten.
+
+Wie jeder Chaoslegionär in der Armee drehte sich Nevilles Kopf ständig, während
+er schwamm, schaute nach oben, unten, herum, zu jeder Seite. Er hielt nicht nur
+nach Sonnenschein-Soldaten Ausschau, sondern auch nach jedem Anzeichen dafür,
+dass ein Chaoslegionär seinen Stab gezogen hatte und im Begriff war, sie zu
+verraten.
+
+Normalerweise warteten Verräter bis zum Schlachtgetümmel, um ihren Zug zu
+machen, aber dieser frühe Gong hatte sie alle in Alarmbereitschaft versetzt.
+...die Wahrheit war, dass Neville darüber traurig war. Im November war er ein
+Soldat in einer vereinten Armee gewesen, in der alle an einem Strang zogen und
+sich gegenseitig halfen, und jetzt beobachteten sie sich alle ständig
+gegenseitig auf die ersten Anzeichen von Verrat. Es mochte für General Chaos
+mehr Spaß machen, aber für Neville war es nicht annähernd so viel Spaß. Die
+Richtung, die früher als \emph{\glqq oben\grqq{} } bekannt war, wurde immer
+heller, je näher sie der Oberfläche und dem Sonnenschein kamen.
+
+\glqq Zauberstäbe raus\grqq{}, sagte General Chaos. Nevilles Truppe zog ihre
+Zauberstäbe und richtete sie geradeaus auf den Feind, während ihre Köpfe
+schneller umher scannten. Wenn es Sonnen-Verräter gab, war es an der Zeit, dass
+sie zuschlugen. Der andere Fischschwarm, die Drachenarmee, tat das Gleiche.
+
+\glqq \textbf{Jetzt}!\grqq{}, rief die ferne Stimme des Drachengenerals. \glqq
+\textbf{Jetzt}!\grqq{}, rief General Chaos. \glqq \textbf{Für
+Sonnenschein!}\grqq{}, schrien alle Soldaten beider Armeen und stürmten nach
+unten.
+
+\glqq Was?\grqq{}, sagte Minerva unwillkürlich, als sie die Bildschirme neben
+dem See beobachtete, ein Schrei, der an vielen anderen Orten widerhallte; ganz
+Hogwarts beobachtete diese Schlacht, wie sie die erste beobachtet hatte.
+
+Professor Quirrell lachte trocken. \glqq Ich habe Sie gewarnt, Schulleiter. Es
+ist unmöglich, Regeln zu haben, ohne dass Mr. Potter sie ausnutzt."
+
+
+Für lange kostbare Sekunden, als die siebenundvierzig Soldaten ihre eigenen
+siebzehn angriffen, war Hermines Verstand leer.
+
+\emph{Warum}...
+
+Dann setzte sich alles zusammen. Jedes Mal, wenn ein Soldat, der ursprünglich
+aus Sonnenschein stammte, von jemandem erschossen wurde, der den Namen
+Sonnenschein rief, würde sie einen Quirrell-Punkt verlieren. Wenn zwei
+Sonnenschein-Soldaten von einer der beiden Armeen erschossen wurden, würden
+beide feindlichen Armeen zwei Punkte näher dran sein, sie zu überholen, es war
+der gleiche Gewinn, nur geteilt. Und wenn jemand einen anderen Soldaten
+erschoss, der nicht im Namen von Sonnenschein war, würde dieser Gong nicht in
+dem Durcheinander verloren gehen...
+
+Hermine war plötzlich sehr froh, dass Zabini nicht den offensichtlichen Plan
+verfolgt hatte, Ärger zwischen den anderen beiden Armeen zu verursachen, während
+sie Sonnenschein angriffen. Es war trotzdem entmutigend, dieses Gefühl, dass die
+eigenen Chancen schwinden, dass einem die Hoffnung genommen wird. Die meisten
+von Hermines Soldaten schauten immer noch verwirrt, aber einige hatten Ausdrücke
+von dämmerndem Entsetzen, als sie es verstanden.
+
+\glqq Es ist alles in Ordnung\grqq{}, sagte Susan Bones fest. Die Köpfe drehten
+sich um und sahen den Sonnenschein Hauptmann an. \glqq Unsere Aufgabe ist es, so
+viele von ihnen mitzunehmen, wie wir können. Und denk daran, Zabini hat alle
+Spione mitgenommen! Wir müssen nicht so auf der Hut sein wie sie!"
+
+Das Mädchen lächelte trotzig und provozierte damit ein erwiderndes Lächeln von
+vielen der anderen Soldaten, sogar von Hermine selbst.
+
+\glqq Es kann so sein wie im November. Wir müssen nur den Kopf hochhalten, unser
+Bestes geben und uns gegenseitig vertrauen -"
+
+Daphne erschoss Sie.
+
+
+\glqq \textbf{Blut für den Blutgott}!\grqq{}, schrie Neville von Chaos, obwohl
+es, da er unter Wasser war, eher wie \emph{'Blubbled für den blubbled glub!}'
+herauskam. Captain Weasley wirbelte herum, hob seinen Zauberstab in Richtung
+Neville und feuerte.
+
+Aber Neville schwamm abwärts auf ihn zu, den Zauberstab geradeaus gerichtet, und
+das bedeutete, dass der Einfache Schild Nevilles gesamtes Profil verdecken
+konnte; wenn jetzt jemand auf ihn schoss, dann nicht der Sonnen-Ron.
+
+Ein grimmig entschlossener Blick ging über Captain Weasleys Gesicht, und er
+schoss pfeilschnell auf Neville zu, wobei er das Wort Contego aussprach, obwohl
+das Schild im Wasser nicht zu sehen war. Die beiden feindlichen Champions
+schossen aufeinander zu wie Pfeile aus Bögen, jeder mit dem Ziel, den anderen in
+der Mitte zu spalten. Sie hatten sich schon viele Male duelliert, aber dieses
+Mal würde sich alles auszahlen.
+
+\glqq \textbf{Regenbögen und Einhörner}!\grqq{}, brüllte der Sonnenschein
+Captain.
+
+\glqq \textbf{Die Schwarze Ziege mit den tausend Jungen!}"
+
+\glqq \textbf{Mach deine Hausaufgaben!}"
+
+Näher und noch näher stürmten die beiden Champions, keiner wollte ausweichen,
+der erste, der sich umdrehte, würde eine verwundbare Breitseite präsentieren und
+erschossen werden, doch wenn keiner der beiden die Nerven verlor, würden sie
+direkt ineinander krachen... Sie fielen geradewegs zu Boden, während der Feind
+sich aufrichtete, um ihn zu treffen, der Hammer senkte sich, um auf den Amboss
+zu treffen, in einem Weg, den keiner von beiden verlassen wollte...
+
+\glqq Spezialangriff, Chaotische Drehung!"
+
+Neville sah den Ausdruck des Entsetzens auf Captain Weasleys Gesicht, als der
+Schwebezauber ihn erwischte. Sie hatten ihn getestet, bevor der Kampf begonnen
+hatte; und genau wie Harry vermutet hatte, wurde \emph{Wingardium Leviosa} zu
+einer ganz neuen Art von Waffe, sobald alle unter Wasser schwammen.
+
+\glqq Verflucht seist du, Longbottom!?\grqq{}, kreischte Ron Weasley, \glqq
+Kannst du nicht einmal ohne deine blöden Spezialattacken kämpfen -\grqq{} und
+schon war der Sonnenschein-Kapitän auf die Seite gedreht und Neville schoss ihm
+ins Bein.
+
+\glqq Ich kämpfe nicht fair\grqq{}, sagte Neville zu der schlafenden Gestalt,
+\glqq \emph{ich kämpfe wie Harry Potter.}"
+
+
+Granger: 237 / Malfoy: 217 / Potter: 220 Es tat immer noch jedes Mal weh, wenn
+er auf Hermine schießen musste. Harry konnte es kaum ertragen, den Ausdruck des
+Friedens zu betrachten, der über ihr schlafendes Gesicht gekommen war, die Arme,
+die nun ziellos umherschwebten, während die Kurven des Sonnenlichts über ihre
+Tarnuniform und die Wolke ihres kastanienbraunen Haars strichen. Und wenn Harry
+versucht hätte, sich davor zu drücken, derjenige zu sein, der sie erschießt ...
+nicht nur Draco hätte gewusst, was das bedeutete, Hermine wäre beleidigt
+gewesen.
+
+\emph{ Sie ist nicht tot,} sagte Harry zu seinem Gehirn, als seine stampfenden
+Füße ihn wegstießen, sie ruht sich nur aus. \emph{IDIOT}.
+
+\emph{Bist du sicher?} sagte sein Gehirn. \emph{Was, wenn sie eine Tote-Hermine
+ist? Könnten wir zurückgehen und nachsehen? }
+
+Harry warf einen kurzen Blick zurück.
+\emph{Siehst du, es geht ihr gut, da kommen Blasen aus ihrem Mund.}
+
+\emph{Könnte ihr letzter Atemzug gewesen sein, der entweicht.}
+
+\emph{ Oh, sei still. Warum bist du überhaupt so paranoid-beschützend?}
+
+\emph{Äh, der erste richtige Freund, den wir in unserem ganzen Leben hatten? Hey, weißt du noch, was mit unserem Lieblingsstein passiert ist?}
+
+\emph{Er war nicht einmal lebendig, geschweige denn empfindungsfähig, das ist
+das erbärmlichste Kindheitstrauma aller Zeiten} -
+
+Die beiden Armeen trennten sich schnell und wurden wieder zu zwei
+Fischschwärmen. General Granger hatte siebzehn Punkte verloren und drei Chaoten
+und zwei Drachen mitgenommen; und ein Chaot und zwei Drachen waren als Verräter
+erschossen worden. Sie hatte also netto sieben Punkte verloren, Harry einen,
+Draco zwei; damit hatte Sonnenschein zwanzig Punkte Vorsprung auf Drache und
+siebzehn Punkte auf Chaos. Chaos konnte immer noch leicht gewinnen, wenn sie
+alle zwanzig verbliebenen Drachen auslöschten. Der Joker waren natürlich die
+sieben verbliebenen Sonnenschein-Soldaten... ...wenn man sie so nennen konnte.
+Die beiden Schwärme schwammen unruhig nebeneinander. Die Soldaten warteten auf
+den Befehl, ihre wahre Zugehörigkeit zu verkünden und anzugreifen.
+
+\glqq Alle, die sie haben\grqq{}, sagte Harry laut, \glqq erinnern sich an die
+Sonderbefehle eins bis drei. Und vergesst nicht, dass es Merlins Befehl auf Drei
+ist. \glqq Die vertrauenswürdigen zwei Drittel der Armee nickten nicht, und das
+andere Drittel schaute nur verwirrt.“
+
+
+Die Drachentruppen begannen, auf Draco zuzusteuern, und die Chaotentruppen
+wirbelten herum und begannen sofort, die Drachen zu verfolgen - Draco fluchte
+laut, als er die Glocke eines chaotischen Sieges hörte, da hatte jemand seinen
+Einfachen Schild nicht richtig ausgerichtet - und dann waren die Drachentruppen
+in Unterstützungsreichweite zueinander und die Chaoten zogen sich in die düstere
+Ferne zurück. Irgendwie hatten die Drachen trotz ihrer zahlenmäßigen
+Überlegenheit dreimal gegen die Chaoslegion getroffen und die Chaoslegion hatten
+viermal zurückgeschlagen, und er hatte gehört, wie ein Drachenspion hingerichtet
+wurde. Entweder hatte sich Harry Potter sehr schnell eine Menge sehr guter Ideen
+einfallen lassen, oder er hatte aus irgendeinem unvorstellbaren Grund schon sehr
+viel Zeit damit verbracht, herauszufinden, wie man unter Wasser kämpfen konnte.
+
+Das funktionierte nicht und Draco musste die Dinge neu überdenken. Es sah so
+aus, als hätten alle auch beim Schwimmen Probleme mit dem Zielen, der Kampf
+könnte so lange dauern, dass die Zeit stehen bliebe... der ferne Unterwassermond
+war nur noch halb voll, das war nicht gut... er musste schnell umdenken...
+
+\glqq Was ist los?\grqq{}, fragte Padma Patil, als sie mit ihrer Truppe zu Draco
+hinüberschwamm. Padma war seine Stellvertreterin; sie war klug und mächtig, und
+besser noch, sie hasste Granger und sah Harry als Rivalen, was sie
+vertrauenswürdig machte. Die Arbeit mit Padma ließ ihn die Wahrheit des alten
+Sprichworts erkennen, dass Ravenclaw die Schwester von Slytherin war; Draco war
+überrascht gewesen, als sein Vater ihm gesagt hatte, es sei ein akzeptables Haus
+für seine zukünftige Frau, aber jetzt sah er den Sinn darin.
+
+\glqq Warte, bis wir alle hier sind\grqq{}, sagte Draco. Die Wahrheit war, dass
+er erst einmal zu Atem kommen musste. Das war das Problem, wenn man der General
+und der mächtigste Zauberer war, man musste ständig Magie anwenden.
+
+Als nächstes kam Zabini, der eine Truppe von zwei Sonnen und vier Drachen
+befehligte, von denen einer Gregory war, der ein Auge auf Zabini hatte. Draco
+hat Zabini nicht getraut. Und weder Draco noch Zabini vertrauten den Sonnen
+genug, um sie zur Mehrheit einer Einheit zu machen; sie sollten entweder Draco
+direkt oder Granger gegenüber loyal sein, die durch das Versprechen getäuscht
+worden war, dass die Drachen am Ende verraten würden, nachdem beide Streitkräfte
+dezimiert worden waren, genauso wie Harrys vertrauenswürdigere Chaoten durch das
+Versprechen, dass sie falsche Schlafverhexungen abfeuern und später zur
+Unterstützung des Chaos wechseln würden, dazu gebracht werden sollten, nicht auf
+die Sonnen zu schießen; aber es war möglich, dass einige der Sonnen dem Chaos
+treu waren und keine echten Schlafverhexungen abfeuerten, und dass dies der
+Grund war, warum Drache nicht so gewann, wie es ihr zahlenmäßiger Vorteil hätte
+zulassen sollen.
+
+.. Die nächste Einheit, die sich näherte, war dezimiert, drei Soldaten hielten
+Zauberstäbe auf zwei andere Soldaten, die mit leeren Händen schwammen. Draco
+knirschte mit den Zähnen. Noch mehr Probleme mit Verrätern. Er musste mit
+Professor Quirrell darüber reden, dass es wenigstens eine Möglichkeit gab,
+Verräter zu bestrafen, Zustände wie diese waren unrealistisch, im richtigen
+Leben folterte man seine Verräter zu Tode.
+
+\glqq General Malfoy!\grqq{}, rief der Kommandant der Problemeinheit, als sie
+heranschwamm, ein Ravenclaw-Junge namens Terry. \glqq Wir wissen nicht, was wir
+tun sollen - Cesi hat Bogdan erschossen, aber Cesi sagt, dass Kellah ihm gesagt
+hat, dass Bogdan Specter erschossen hat -"
+
+\glqq Das habe ich nicht!\grqq{}, sagte Kellah. \glqq Doch, hast du!\grqq{},
+kreischte Cesi. \glqq General Malfoy, sie ist die Spionin, ich hätte sie -"
+
+\glqq Somnium\grqq{}, sagte Draco. Es gab die dreifache Glocke eines
+Ein-Punkt-Verlustes von Drache, und dann begann Kellahs schlaffer Körper im
+Wasser davon zu treiben. Draco hatte zu diesem Zeitpunkt schon das Wort \glqq
+\emph{Rekursion}\grqq{} gehört, und er erkannte einen Harry-Potter-Plot, wenn er
+einen sah.
+
+(Leider hatte Draco noch nie etwas von Autoimmunerkrankungen gehört, und der
+Gedanke, dass ein cleverer Virus seinen Angriff damit beginnen würde, Symptome
+einer Autoimmunerkrankung zu erzeugen, um den Körper dazu zu bringen, seinem
+eigenen Immunsystem zu misstrauen, kam ihm nicht ohne weiteres in den Sinn...)
+
+\glqq Allgemeiner Befehl!?\grqq{}, sagte Draco und erhob seine Stimme. \glqq
+Niemand darf Spione erschießen, außer mir, Gregory, Padma und Terry. Wenn jemand
+etwas Verdächtiges sieht, kommt er zu einem von uns."
+
+Und dann - da ertönte die Glocke von Sonnenschein, die zwei Punkte erzielte.
+
+\glqq Was?\grqq{}, sagten Draco und Zabini etwa gleichzeitig; ihre Köpfe
+schwenkten herum. Niemand schien getroffen worden zu sein, und alle
+Sonnenschein-Soldaten waren anwesend und anwesend.
+
+(Außer Parvati, die von irgendeinem noch unbekannten Verräter in Padmas Truppe
+angeschossen worden war; und natürlich hatte Padma wieder auf Parvati
+geschossen, für den Fall, dass sie nur simuliert hatte, also war sie es
+nicht...)
+
+\glqq Ein Sonnen-Verräter im Chaos?\grqq{}, fragte Zabini und klang verwirrt.
+\glqq Aber alle, von denen ich wusste, dass sie während des Angriffs von Chaos
+auf Sonnenschein zuschlagen sollten -"
+
+\glqq Nein!\grqq{}, sagte Padma in einem Ton der plötzlichen Erkenntnis. \glqq
+Das war Chaos, das einen Spion exekutiert hat!"
+
+\glqq Was?\grqq{}, sagte Zabini. \glqq Aber warum -"
+
+Und Draco bekam es mit.
+\emph{ Verdammt noch mal!}
+\glqq Weil Potter denkt, er sei sicher, weil er Sonnenschein schlägt, aber
+nicht, weil er uns schlägt! Also will er keinen einzigen Punkt verlieren, wenn
+er einen Verräter hinrichtet! Allgemeiner Befehl! Wenn Du einen Verräter
+hinrichten musst, rufe zuerst Sonnenschein! Und vergesst nicht, danach wieder zu
+Drache zu wechseln -"
+
+
+Granger: 253 / Malfoy: 252 / Potter: 252 Longbottoms Körper trieb chaotisch
+durch das Wasser, Arme und Beine wirr durcheinander. Nachdem Draco endlich einen
+Treffer gelandet hatte, hatten sie alle noch einmal auf ihn geschossen, nur um
+sicherzugehen. In der Nähe befand sich Harry Potter, der nun von einer
+prismatischen Kugel geschützt wurde und sie alle grimmig ansah, während der
+letzte Splitter der Mondsichel langsam abnahm, irgendwo weit weg. Wenn
+Longbottom es geschafft hätte, einen weiteren Soldaten zu erschießen (Draco
+wusste, dass Harry dachte), wenn die beiden Chaoten es geschafft hätten, nur ein
+wenig länger durchzuhalten, hätten sie vielleicht gewonnen...
+
+Nachdem Draco seine Streitkräfte neu formiert hatte und wieder losgezogen war,
+hatte die darauf folgende Schlacht und die Hinrichtung von Spionen im Namen von
+Sonnenschein dazu geführt, dass Sonnenschein genau einen Punkt vor Drache und
+Chaos lag. Nachdem Harry damit angefangen hatte, war Draco keine andere Wahl
+geblieben, als dem Beispiel zu folgen. Aber jetzt waren sie General Chaos, den
+Überlebenden der Drache-Armee und dem letzten verbliebenen Verräter von Sonnen
+drei zu eins unterlegen: Draco, und Padma, und Zabini. Und Draco, der kein Narr
+war, hatte Padma befohlen, Zabinis Zauberstab zu nehmen, nachdem Longbottom auf
+Gregory geschossen hatte und seinerseits zu Draco gefallen war. Der Junge hatte
+ihm einen beleidigten Blick zugeworfen, Draco gesagt, dass er ihm das schuldig
+sei, und ihn ausgehändigt. Damit blieben Draco und Padma übrig, um General Chaos
+zur Strecke zu bringen.
+
+\glqq Ich nehme nicht an, dass Sie sich ergeben wollen?\grqq{}, sagte Draco und
+lächelte so böse wie jedes Lächeln, das er jemals Harry Potter zugewandt hatte.
+
+\glqq Schlafen, vor der Kapitulation!\grqq{}, rief General Chaos.
+
+\glqq Nur damit du es weißt\grqq{}, sagte Draco, \glqq Zabini hat nicht wirklich
+eine ältere Schwester, die du vor den Gryffindor-Tyrannen retten kannst. Aber
+Zabini hat eine Mutter, die Muggelgeborene wie Granger nicht gutheißt, und ich
+habe ihr ein paar Notizen geschrieben und Zabini ein paar Gefallen angeboten -
+nichts, was mit meinem Vater zu tun hat, nur Dinge, die ich in der Schule tun
+kann. Und übrigens, Zabinis Mutter billigt den Jungen, der gelebt hat, auch
+nicht. Nur für den Fall, dass du immer noch glaubst, Zabini sei wirklich auf
+deiner Seite."
+
+Harrys Gesicht wurde noch grimmiger.
+
+Draco hob seinen Zauberstab und begann rhythmisch zu atmen, um Kraft für eine
+Schildbrecher Verhexung zu sammeln.
+
+Grangers Prismatische Kugel war jetzt fast so stark wie die von Draco, und
+Harrys war nicht viel schwächer, \emph{wo nahmen die beiden nur die Zeit her?}
+\glqq Lagann!\grqq{}, sprach Draco und setzte alles ein, was er hatte, und die
+grüne Spirale loderte auf und Harrys Schild zerbrach, und fast im selben Moment
+- \glqq Somnium!\grqq{}, sagte Padma.
+
+
+Granger: 253 / Malfoy: 252 / Potter: 254 Harry stieß einen langen Atemzug der
+Erleichterung aus, und das nicht nur, weil er die Prismatische Kugel nicht mehr
+halten musste. Seine Hand zitterte, als er seinen Zauberstab senkte.
+
+\glqq Weißt du\grqq{}, sagte Harry, \glqq ich war einen Moment lang ziemlich
+besorgt."
+
+Spezialauftrag zwei: Wenn ein Sonnen-Verräter nicht wirklich auf dich zu
+schießen scheint, täusche gelegentlich vor, getroffen zu werden. Zielen Sie
+lieber auf Drachen als auf Sonnen, aber schießen Sie ruhig auf Sonnen, wenn Sie
+nicht auf Drachen schießen können. Sonderauftrag 3: Merlin sagt, schießen Sie
+nicht auf Blaise Zabini oder einen der Patil-Zwillinge.
+
+Mit einem breiten Grinsen streifte Parvati Patil den verwandelten Aufnäher von
+den Insignien ihrer Uniform ab und ließ ihn im Wasser davonschwimmen.
+
+\glqq Gryffindors für Chaos\grqq{}, sagte sie und reichte Zabini seinen
+Zauberstab zurück. \glqq Vielen Dank\grqq{}, sagte Harry und verbeugte sich
+schwungvoll vor dem Gryffindor-Mädchen. \glqq Und ich danke Ihnen auch\grqq{},
+verbeugte er sich vor Zabini. \glqq Wissen Sie, als Sie mit diesem Plan zu mir
+kamen, habe ich mich gefragt, ob Sie brillant oder verrückt sind, und ich habe
+beschlossen, dass Sie beides sind. Und übrigens\grqq{}, sagte Harry und drehte
+sich nun um, als wolle er Dracos Körper ansprechen, \glqq Zabini hat einen
+Cousin -"
+
+\glqq Somnium\grqq{}, sagte Zabinis Stimme.
+
+
+Granger: 255 / Malfoy: 252 / Potter: 254 Und Harry Potters Körper schwebte
+davon, sein Ausdruck des Schocks und des Entsetzens entspannte sich schnell in
+den Schlaf.
+
+\glqq Wenn ich es mir recht überlege\grqq{}, sagte Parvati fröhlich, \glqq
+machen wir Gryffindors für Sonnenschein.\grqq{} Sie begann zu lachen, so erfreut
+wie noch nie in ihrem Leben, sie hatte endlich ihre Zwillingsschwester ermorden
+und ersetzen können, und das wollte sie schon seit Ewigkeiten tun, und das war
+perfekt gewesen, es war alles perfekt gewesen - - und dann drehte sich ihr
+Zauberstab blitzschnell herum, gerade als Zabinis Zauberstab sich drehte, um auf
+sie zu zeigen.
+
+\glqq Warte!\grqq{}, sagte Zabini. \glqq Nicht schießen, keinen Widerstand
+leisten. Das ist ein Befehl."
+
+\glqq Was?\grqq{}, sagte Parvati.
+
+\glqq Tut mir leid\grqq{}, sagte Zabini und sah nicht ganz aufrichtig
+entschuldigend aus, \glqq aber ich kann mir nicht ganz sicher sein, dass du für
+Sonnenschein bist. Also befehle ich dir, dich von mir erschießen zu lassen."
+
+\glqq Moment mal!?\grqq{}, sagte Parvati. \glqq Wir sind dem Chaos nur einen
+Punkt voraus! Wenn du mich jetzt erschießt -"
+
+\glqq Ich erschieße dich natürlich im Namen der Drachen\grqq{}, sagte Zabini,
+der jetzt ein wenig überlegen klang.
+
+\glqq Nur weil wir sie ausgetrickst haben, heißt das nicht, dass es bei mir auch
+funktioniert.\grqq{} Parvati starrte ihn an, ihre Augen verengten sich. \glqq
+General Malfoy hat gesagt, deine Mutter mag Hermine nicht."
+
+\glqq Das nehme ich an\grqq{}, sagte Zabini, immer noch mit diesem überlegenen
+Grinsen. \glqq Aber einige von uns sind eher bereit als Draco Malfoy, ein
+Elternteil zu ärgern."
+
+\glqq Und Harry Potter sagte, du hast einen Cousin -"
+
+\glqq Nö\grqq{}, sagte Zabini.
+
+Parvati starrte ihn an und versuchte nachzudenken, aber sie war nicht wirklich
+gut im Plotten; Zabini hatte gesagt, der Plan sei gewesen, den Punktestand von
+Chaos und Drache heimlich so ausgeglichen wie möglich zu halten, damit sie
+Sonnenscheins Namen benutzen würden, um ihre Verräter hinzurichten, anstatt auch
+nur einen einzigen Punkt zu verlieren, und das hatte funktioniert... aber... sie
+hatte das Gefühl, etwas zu übersehen, sie war keine Slytherin... \glqq Warum
+erschieße ich dich nicht im Namen des Drachen?\grqq{}, fragte Parvati.
+
+\glqq Weil ich im Rang über dir stehe\grqq{}, sagte Zabini.
+
+Parvati hatte ein ungutes Gefühl dabei. Sie starrte ihn einen langen Moment lang
+an. Und dann - \glqq Somni-\grqq{}, begann sie zu sagen, und merkte dann, dass
+sie nicht für Drache gesagt hatte, und unterbrach sich hektisch -
+
+Granger: 255 / Malfoy: 254 / Potter: 254 \glqq Hey, Leute\grqq{}, sagte Blaise
+Zabinis Gesicht auf den Bildschirmen und sah ziemlich amüsiert aus, \glqq ich
+schätze, es liegt alles an mir."
+
+Überall am Seeufer hielten die Leute den Atem an. Sonnenschein lag mit genau
+einem Punkt Vorsprung vor Drache und Chaos. Blaise Zabini konnte sich entweder
+im Namen von Drache oder Chaos erschießen, oder die Dinge einfach so lassen, wie
+sie waren.
+
+Eine Reihe von Glockenspielen zeigte an, dass die letzte Minute der Zeit ablief.
+Und der Slytherin lächelte ein seltsames, verdrehtes Lächeln und spielte
+beiläufig mit seinem Zauberstab, das dunkle Holz kaum sichtbar im dunklen
+Wasser.
+
+\glqq Wisst ihr\grqq{}, sagte Blaise Zabinis Stimme, im Tonfall von jemandem,
+der die Worte schon eine Weile einstudiert hatte, \glqq es ist nur ein Spiel,
+wirklich. Und Spiele sollen doch Spaß machen. Wie wäre es also, wenn ich einfach
+tue, worauf ich Lust habe?"
 
-"I'm sorry," said Minerva, "I don't\mbox{---}"
-
-"Procopius," said Dumbledore. "They took their chariot-racing very seriously,
-in the Roman Empire. Yes, Minerva, I agree that something must be done."
-
-"Soon," Minerva said, her voice lowering even further. "Albus, I think it must
-be done before Saturday."
-
-On Sunday, most students would leave Hogwarts to stay the holiday with their
-families; Saturday, then, was the final battle of the three first-year armies
-that would determine the awarding of Professor Quirrell's thrice-cursed
-Christmas wish.
-
-Dumbledore glanced over at her, studying her gravely. "You fear that the
-explosion will come then, and someone will be hurt."
-
-Minerva nodded.
-
-"And that Professor Quirrell will be blamed."
-
-Minerva nodded again, her face tight. She had long since become wise in the
-ways that Defense Professors were fired. "Albus," Minerva said, "we cannot lose
-Professor Quirrell now, we \emph{cannot!} If he but stays through January our
-fifth-years will pass their OWLs, if he stays through March our seventh-years
-will pass their NEWTs, he is remedying years of neglect in months, a whole
-generation will grow up able to defend themselves in spite of the Dark Lord's
-curse---you must stop the battle, Albus! Ban the armies now!"
-
-"I am not sure the Defense Professor would take that kindly," said Dumbledore,
-glancing over toward the Head Table where Quirrell was drooling into his soup.
-"He did seem most attached to his armies, though when I agreed I thought there
-would be four in each year." The old wizard sighed. "A clever man, probably
-with the best of intentions; but perhaps not clever enough, I fear. And to ban
-the armies might also trigger the explosion."
-
-"But then Albus, what will you \emph{do?}"
-
-The old wizard favored her with a benign smile. "Why, I shall plot, of course.
-It's the new fashion in Hogwarts."
-
-And they had come too close to the Head Table for Minerva to say anything more.
-\sbreak
-The terrifying part was how fast the whole thing had spiraled out of control.
-
-The first battle in December had been{\el} messy, or so Draco had heard.
-
-The second battle had been \emph{deranged}.
-
-And the next one would be \emph{worse}, unless the three of them together
-succeeded in their last desperate attempt to stop it.
-
-"Professor Quirrell, this is insanity," Draco said flatly. "This isn't
-Slytherin any more, it's just{\el}" Draco was at a loss for words. He
-waved his hands helplessly. "You can't possibly do any real plots with all this
-stuff going on. Last battle, one of my soldiers faked his own suicide. We have
-\emph{Hufflepuffs} trying to plot, and they think they can, but they
-\emph{can't.} Things just happen at random now, it doesn't have anything to do
-with who's cleverest, or which army fights best, it's{\el}" He couldn't even
-describe it.
-
-"I agree with Mr.~Malfoy," said Granger in the tones of someone who hadn't ever
-expected to hear herself saying those words. "Allowing traitors isn't working,
-Professor Quirrell."
-
-Draco had tried forbidding anyone in his army to plot except him, and that had
-just driven the plots underground, no one wanted to be left out when the
-soldiers in \emph{other} armies got to plot. After miserably losing their last
-battle, he'd finally given in and revoked his decree; but by then his soldiers
-had already started setting their own personal plans in motion, without any
-sort of central coordination.
-
-After being told all the plans, or what his soldiers claimed were their plans,
-Draco had tried to sketch a plot to win the final battle. It had required
-considerably more than three different things to go right, and Draco had used
-\emph{Incendio} on the paper and \emph{Everto} to vanish the ashes, because if
-Father had seen it he would have been disowned.
-
-Professor Quirrell's eyelids were half-closed, his chin resting on his hands as
-he leaned forward onto his desk. "And you, Mr.~Potter?" said the Defense
-Professor. "Are you likewise in agreement?"
-
-"All we'd need to do is shoot Franz Ferdinand and we could start World War
-One," said Harry. "It's gone to complete chaos. I'm all for it."
-
-"\emph{Harry!}" said Draco in utter shock.
-
-He didn't even realize until a second later that he'd said it at exactly the
-same time, and in exactly the same tone of indignation, as Granger.
-
-Granger shot him a startled glance, and Draco carefully kept his face neutral.
-Oops.
-
-"That's right!" said Harry. "I'm betraying you! Both of you! Again! Ha ha!"
-
-Professor Quirrell was smiling thinly, though his eyes were still half-closed.
-"And why is that, Mr.~Potter?"
-
-"Because I think I can cope with the chaos better than Miss Granger or
-Mr.~Malfoy," said the traitor. "Our war is a zero-sum game, and it doesn't
-matter whether it's easy or hard in an absolute sense, only who does better or
-worse."
-
-Harry Potter was learning far too fast.
-
-Professor Quirrell's eyes moved beneath their lids to regard Draco, and then
-Granger. "In truth, Mr.~Malfoy, Miss Granger, I simply could not live with
-myself if I shut down the grand debacle before its climax. One of your soldiers
-has even become a quadruple agent."
-
-"\emph{Quadruple?}" said Granger. "But there's only three sides in the war!"
-
-"Yes," said Professor Quirrell, "you'd think that, wouldn't you. I am not sure
-that there has ever in history been a quadruple agent, or any army with such a
-high fraction of real and pretended traitors. We are exploring new realms, Miss
-Granger, and we cannot turn back now."
-
-Draco left the Defense Professor's office with his teeth gritting hard against
-each other, and Granger looking even more annoyed beside him.
-
-"I can't believe you did that, Harry!" said Granger.
-
-"Sorry," Harry said, not sounding sorry at all, his lips curved up in a merry
-smile of evil. "Remember, Hermione, it \emph{is} just a game, and why should
-generals like us be the only ones who get to plot? And besides, what are the
-two of you going to do about it? Team up against me?"
-
-Draco traded glances with Granger, knowing that his own face was as tight as
-hers. Harry had been relying, more and more openly and gloatingly, on Draco's
-refusal to make common cause with a Mudblood girl; and Draco was beginning to
-get \emph{sick} of having that used against him. If this kept up much longer he
-\emph{was} going to ally with Granger just to crush Harry Potter, and see how
-much the son of a Mudblood liked \emph{that.}
-\sbreak
-The terrifying part was how fast the whole thing had spiraled out of control.
-
-Hermione stared at the parchment Zabini had given her, feeling utterly and
-completely helpless.
-
-There were names, and lines connecting the names to other names, and some of
-the lines were in different colors and{\el}
-
-"Tell me," said General Granger, "is there anyone in my army who \emph{isn't} a
-spy?"
-
-The two of them weren't in the office but in another, deserted classroom, and
-they were alone; because, Colonel Zabini had said, it was now nearly certain
-that at least one of the captains was a traitor. Probably Captain Goldstein,
-but Zabini didn't know for sure.
-
-Her question had put an ironic smile on the young Slytherin's face. Blaise
-Zabini always seemed a little disdainful of her, but he didn't seem to actively
-dislike her; nothing like the derision he held for Draco Malfoy, or the
-resentment he had developed for Harry Potter. She had worried at first about
-Zabini betraying her, but the boy seemed desperate to show that the other two
-generals were no better than him; and Hermione thought that while Zabini would
-probably be happy to sell her out to anyone \emph{else}, he'd never let Malfoy
-or Harry win.
-
-"Most of your soldiers \emph{are} still loyal to you, I'm pretty sure," said
-Zabini. "It's just that no one wants to be left out of the fun." The scornful
-look on the Slytherin's face made it clear what he thought of people who didn't
-take plotting seriously. "So they think they can be double agents and secretly
-work for our side while pretending to betray us."
-
-"And that would also go for anyone in the \emph{other} armies who says they
-want to be \emph{our} spy," Hermione said carefully.
-
-The young Slytherin shrugged. "I think I did a good job of telling which ones
-really want to sell out Malfoy, I'm not sure \emph{anyone} really wants to sell
-out Potter to you. But Nott is a sure bet for betraying Potter to Malfoy and
-since I had Entwhistle approach him supposedly on behalf of Malfoy and
-Entwhistle really reports to us, that's almost as good\mbox{---}"
-
-Hermione closed her eyes for a moment. "We're going to lose, aren't we?"
-
-"Look," Zabini said patiently, "You're in the lead right now on Quirrell
-points. We just have to not lose this last battle \emph{completely} and you'll
-have enough Quirrell points to win the Christmas wish."
-
-Professor Quirrell had announced that the final battle would operate on a
-formal scoring system, which he'd been asked to do to avoid recriminations
-afterward. Each time you shot someone, the general of your army got two
-Quirrell points. A gong would ring through the battle area (they didn't know
-yet where they would be fighting, though Hermione was hoping for the forest
-again, where Sunshine did well) and its pitch would tell which army had won the
-points. And if anyone was faking being hit, the gong would ring out anyway, and
-then a double gong would ring later, after no fixed time, to hail the
-retraction. And if you called the name of an army, cried "For Sunshine!" or
-"For Chaos!" or "For Dragon!", it switched your allegiance to that army{\el}
-
-Even Hermione had been able to see the flaw in \emph{that} set of rules. But
-Professor Quirrell had gone on to announce that if you'd been originally
-assigned to Sunshine, nobody could shoot you in the name of Sunshine---or
-rather, they could, but then Sunshine lost a single Quirrell point, symbolized
-by a triple gong. That prevented you from shooting your own soldiers for
-points, and discouraged suiciding before the enemy got you, but you could still
-shoot spies if you had to.
-
-Right now, Hermione had two hundred and forty-four Quirrell points, and Malfoy
-had two hundred and nineteen, and Harry had two hundred and twenty-one; and
-there were twenty-four soldiers in each army.
-
-"So we fight carefully," Hermione said, "and just try not to lose too badly."
-
-"No," said Zabini. The young Slytherin's face was now serious. "The problem is,
-Malfoy and Potter both know that their only way to win is to combine and crush
-us, then fight it out on their own. So here's what I think we should do\mbox{---}"
-
-Hermione left the classroom in something of a daze. Zabini's plan hadn't been
-the obvious one, it had been strange and complicated and layered and the sort
-of thing she would've expected Harry to come up with, not Zabini. It felt wrong
-just for her to be able to \emph{understand} a plan like that. Young girls
-shouldn't be able to understand plans like that. The Hat would've Sorted her
-into Slytherin, if it'd seen that she could understand plans like that{\el}
-\sbreak
-The awesome thing was how fast he'd been able to escalate the chaos once he
-started doing it deliberately.
-
-Harry sat in his office; he'd been given the authority to order furniture from
-the house elves, so he'd ordered a throne, and curtains in a black and crimson
-pattern. Scarlet light like blood, mixed with shadow, poured over the floor.
-
-Something in Harry felt like he'd finally come home.
-
-Before him stood the four Lieutenants of Chaos, his most trusted minions, one
-of whom was a traitor.
-
-This. This was what life should be like.
-
-"We are gathered," said Harry.
-
-"Let Chaos reign," chorused his four Lieutenants.
-
-"My hovercraft is full of eels," said Harry.
-
-"I will not buy this record, it is scratched," chorused his four Lieutenants.
-
-"All mimsy were the borogroves."
-
-"And the mome raths outgrabe!"
-
-That concluded the formalities.
-
-"How goes the confusion?" Harry said in a dry whisper like Emperor Palpatine.
-
-"It goes well, General Chaos," said Neville in the tone he always used for
-military matters, a tone so deep that the boy often had to stop and cough. The
-Chaotic Lieutenant was neatly dressed in his black school robes, trimmed in the
-yellow of Hufflepuff House, and his hair was parted and combed in the usual
-look for an earnest young boy. Harry had liked the incongruity better than any
-of the cloaks they'd tried. "Our Legionnaires have begun five new plots since
-yesterday evening."
-
-Harry smiled evilly. "Do any of them have a chance of working?"
-
-"I don't think so," said Neville of Chaos. "Here's the report."
-
-"Excellent," said Harry, and laughed chillingly as he took the parchment from
-Neville's hand, trying his best to make it sound like he was choking on dust.
-That brought the total to sixty.
-
-Let Draco \emph{try} to handle that. Let him \emph{try}.
-
-And as for Blaise Zabini{\el}
-
-Harry laughed again, and this time it didn't even take an effort to sound evil.
-He really needed to borrow someone's pet Kneazle for his staff meetings, so
-he'd have a cat to stroke while he did this.
-
-"Can the Legion stop making plots now?" said Finnigan of Chaos. "I mean, don't
-we have enough already\mbox{---}"
-
-"No," Harry said flatly. "We can \emph{never} have enough plots."
-
-Professor Quirrell had put it perfectly. They were pushing the boundaries
-further, perhaps, than they had ever been pushed; and Harry wouldn't have been
-able to live with himself if he'd turned back now.
-
-There came a knock at the door.
-
-"That will be the Dragon General," Harry said, smiling with evil prescience.
-"He arrives precisely as I expected. Do show him in, and yourselves out."
-
-And the four Lieutenants of Chaos shuffled out, casting dark looks at Draco as
-the enemy general entered into Harry's secret lair.
-
-If he wasn't allowed to do this when he was older, Harry was just going to stay
-eleven forever.
-\sbreak
-The sun was dripping through the red curtains, sending rays of blood dancing
-across the floor from behind Harry Potter's grownup-sized cushioned chair,
-which he had covered in gold and silver glitter and insisted on referring to as
-his throne.
-
-(Draco was beginning to feel a lot more confident that he'd done the right
-thing in deciding to overthrow Harry Potter before he could take over the
-world. Draco couldn't even \emph{imagine} what it would be like to live under
-his rule.)
-
-"Good evening, Dragon General," said Harry Potter in a chill whisper. "You have
-arrived just as I expected."
-
-This was not surprising, considering that Draco and Harry had agreed on the
-meeting time in advance.
-
-And it also wasn't evening, but by now Draco knew better than to say anything.
-
-"General Potter," Draco said with as much dignity as he could manage, "you know
-that our two armies have to work together for \emph{either} of us to win
-Professor Quirrell's wish, right?"
-
-"Yesss," hissed Harry, like the boy thought he was a Parselmouth. "We must
-cooperate to destroy Sunshine, and only then fight it out between us. But if
-one of us betrays the other earlier on, that one could gain an advantage in the
-later fight. And the Sunshine General, who knows all this, will try to trick
-each of us into thinking the other has betrayed them. And you and I, who know
-that, will be tempted to betray the other and pretend that it is Granger's
-trickery. And Granger knows \emph{that}, as well."
-
-Draco nodded. That much was obvious. "And{\el} both of us \emph{only} want
-to win, and there's no one else who'll punish either of us if we defect{\el}"
-
-"Precisely," said Harry Potter, his face now turning serious. "We are faced
-with a \emph{true} Prisoner's Dilemma."
-
-The Prisoner's Dilemma, according to Harry's teachings, ran thus: Two prisoners
-had been locked in separate cells. There was evidence against each prisoner,
-but only minor evidence, enough for a prison sentence of two years apiece. Each
-prisoner could opt to \emph{defect,} betray the other, testify against them in
-court; and this would take one year off their own prison sentence, but add two
-years to the other's. Or a prisoner could \emph{cooperate,} staying silent. So
-if both prisoners defected, each testifying against the other, they would serve
-three years apiece; if both cooperated, or stayed silent, they would serve two
-years each; but if one defected and the other cooperated, the defector would
-serve a single year, and the cooperator would serve four.
-
-And both prisoners had to make their decision without knowing the other one's
-choice, and neither would be given a chance to change their decision afterward.
-
-Draco had observed that if the two prisoners had been Death Eaters during the
-Wizarding War, the Dark Lord would have killed any traitors.
-
-Harry had nodded and said that was \emph{one} way to resolve the Prisoner's
-Dilemma---and in fact both Death Eaters would \emph{want} there to be a Dark
-Lord for exactly that reason.
-
-(Draco had asked Harry to stop and let him to think about this for a while
-before they continued. It had explained a \emph{lot} about why Father and his
-friends had agreed to serve under a Dark Lord who often wasn't nice to
-them{\el})
-
-In fact, Harry had said, this was pretty much the reason why people had
-governments---\emph{you} might be better off if you stole from someone else,
-just like each prisoner would be individually better off if they defected in
-the Prisoner's Dilemma. But if \emph{everyone} thought like that, the country
-would fall into chaos and everyone would be worse off, like what would happen
-if both prisoners defected. So people let themselves be ruled by governments,
-just like the Death Eaters had let themselves be ruled by the Dark Lord.
-
-(Draco had asked Harry to stop again. Draco had always taken for granted that
-ambitious wizards put themselves in power because they wanted to rule, and
-people let themselves be ruled because they were scared little Hufflepuffs. And
-this, on reflection, still seemed true; but Harry's perspective was fascinating
-even if it was wrong.)
-
-But, Harry had continued afterward, the fear of a third party punishing you was
-not the \emph{only} possible reason to cooperate in the Prisoner's Dilemma.
-
-Suppose, Harry had said, you were playing the game against a magically produced
-identical copy of yourself.
-
-Draco had said that if there were two Dracos, of course neither Draco would
-want anything bad to happen to the other one, not to mention that no Malfoy
-would let himself become known as a traitor.
-
-Harry had nodded again, and said that this was yet \emph{another} solution to
-the Prisoner's Dilemma---people might cooperate because they cared about each
-other, or because they had senses of honor, or because they wanted to preserve
-their reputation. Indeed, Harry had said, it was rather difficult to construct
-a \emph{true} Prisoner's Dilemma---in real life, people usually cared about the
-other person, or their honor or their reputation or a Dark Lord's punishment or
-\emph{something} besides the prison sentences. But suppose the copy had been of
-someone \emph{completely} selfish---
-
-(Pansy Parkinson had been the example they'd used)
-
----so each Pansy only cared what happened to \emph{her} and not to the other
-Pansy.
-
-\emph{Given} that this was all Pansy cared about{\el} and that there was no
-Dark Lord{\el} and Pansy wasn't worried about her reputation{\el} and
-Pansy either had no sense of honor or didn't consider herself obligated to the
-other prisoner{\el} \emph{then} would the rational thing be for Pansy to
-cooperate, or defect?
-
-Some people, Harry said, claimed that the rational thing to do was for Pansy to
-defect against her copy, but Harry, plus someone named Douglas Hofstadter,
-thought these people were wrong. Because, Harry had said, if Pansy
-defected---not at random, but for what seemed to her like \emph{rational
-reasons}---then the other Pansy would think exactly the same way. Two identical
-copies wouldn't decide different things. So Pansy had to choose between a world
-in which both Pansies cooperated, or a world in which both Pansies defected,
-and she was better off if both copies cooperated. And if Harry had thought
-`rational' people \emph{did} defect in the Prisoner's Dilemma, then he wouldn't
-have done anything to spread that kind of `rationality', because a country or a
-conspiracy full of `rational' people would dissolve into chaos. You would tell
-your \emph{enemies} about `rationality'.
-
-Which had all \emph{sounded} reasonable at the time, but \emph{now} the thought
-was occurring to Draco that{\el}
-
-"\emph{You} said," Draco said, "that the rational solution to the Prisoner's
-Dilemma is to cooperate. But of course \emph{you} would want me to believe
-that, wouldn't you?" And if Draco was fooled into cooperating, Harry would just
-say, \emph{Ha ha, betrayed you again!} and laugh at him about it afterward.
-
-"I wouldn't fake your lessons," Harry said seriously. "But I have to remind
-you, Draco, that I didn't say you should just automatically cooperate. Not on a
-\emph{true} Prisoner's Dilemma like this one. What I said was that when you
-choose, you shouldn't think like you're choosing for just yourself, \emph{or}
-like you're choosing for everyone. You should think like you're choosing for
-all the people who are \emph{similar enough} to you that they'll probably do
-the same thing you do for the same reasons. And also choosing the predictions
-made by anyone who knows you well enough to predict you accurately, so that you
-never have to regret being rational because of the correct predictions that
-other people make about you---remind me to explain about Newcomb's Problem at
-some point. So the question you and I have to ask, Draco, is this: are we
-similar enough that we'll probably do the \emph{same thing} whatever it is,
-making our decisions in mostly the same way? Or do we know each other well
-enough to predict each other, so that \emph{I} can predict whether you'll
-cooperate or defect, and \emph{you} can predict that I've decided to do the
-same thing I predict you'll do, because \emph{I} know that you can predict me
-deciding that?"
-
-{\el} and Draco could not help but think that since he had to strain just to
-understand \emph{half} of that, the answer was obviously `No'.
-
-"Yes," said Draco.
-
-There was a pause.
-
-"I see," said Harry, sounding disappointed. "Oh, well. I guess we'll have to
-think of some other way, then."
-
-Draco hadn't thought that was going to work.
-
-Draco and Harry talked about it back and forth. They had both agreed much
-earlier that what they did on the battlefield would \emph{not} count as broken
-promises in real life---though Draco was a little angry about what Harry had
-done in Professor Quirrell's office, and said so.
-
-But if the two of them couldn't rely on honor or friendship, that \emph{did}
-leave the question of how to get their armies to work together on beating
-Sunshine, despite everything Granger might try to break them up. Professor
-Quirrell's rules didn't make it tempting to let Sunshine kill the other army's
-soldiers---that just increased the bar you had to pass yourself---but it did
-tempt each side to steal kills instead of acting like a single army would, or
-to shoot some of the other side's soldiers during the confusion of
-battle{\el}
-\sbreak
-Hermione was walking back to Ravenclaw not really looking where she was going,
-her mind preoccupied with war and treachery and other age-inappropriate
-concepts, and she turned a corner and bumped straight into a grownup.
-
-"Sorry," she said automatically, and then, entirely without thinking,
-"\emph{Eeeeek!}"
-
-"Don't worry, Miss Granger," said the cheerful smile, set beneath the twinkling
-eyes, and above the silver beard, of the HEADMASTER OF HOGWARTS. "You are quite
-forgiven."
-
-Her gaze was helplessly locked on the kindly face of the most powerful wizard
-in the world, who was also the Chief Warlock, who was also the Supreme Mugwump,
-who had gone insane years ago from the stress of fighting the Dark Lord, and
-numerous other facts that were popping up into her mind one after the other
-while her throat went on making little embarrassing squeaks.
-
-"In fact, Miss Granger," said Albus Percival Wulfric Brian Dumbledore, "it is
-quite lucky that we bumped into each other. Why, I was just now wondering
-curiously what the three of you were thinking of asking for your wishes{\el}"
-\sbreak
-Saturday dawned bright and clear and with the students speaking in hushed
-voices, as though the first to shout might set off the explosion.
-\sbreak
-Draco had hoped that they would be fighting in the upper levels of Hogwarts
-again. Professor Quirrell had said that real fights were more likely to take
-place in cities than forests, and fighting inside schoolrooms and corridors was
-supposed to simulate that, with ribbons to mark the allowed areas. Dragon Army
-had done well in those fights.
-
-Instead, just as Draco had feared, Professor Quirrell had come up with
-something \emph{special} for this battle.
-
-The battleground was the Hogwarts Lake.
-
-And not in boats, either.
-
-They were fighting \emph{underwater}.
-
-The Giant Squid had been temporarily paralyzed; spells had been set in place to
-keep away the grindylows; Professor Quirrell had gone and talked to the
-merfolk; and all the soldiers had been issued \emph{potions of underwater
-action} that allowed them to breathe, see clearly, talk to each other, and swim
-not quite as fast as a fast walk by kicking their legs.
-
-A huge silver sphere hung in the center of the battleground, shining like a
-small underwater moon. It would help to provide a sense of direction---at
-first. The moon would slowly go into eclipse as the battle went on, and when it
-had gone entirely dark, the battle would end if it hadn't already.
-
-War in water. You couldn't defend a perimeter, attackers could come at you from
-any direction, and even with the potion you couldn't see very far in the
-darkness of the lake.
-
-And if you swam too far away from the action, you would start to glow after a
-while, and be easy to hunt down---ordinarily if an army scattered and ran
-instead of fighting, Professor Quirrell would just declare them defeated; but
-today they were working on a points system. Of course you still had some time
-\emph{before} you started to glow, if you wanted to play assassin.
-
-Dragon Army had been set low in the water at the start of the game; above and
-far away, the distant underwater moon shone. The murky water was mostly lit by
-\emph{Lumos} Charms, though his soldiers would extinguish the lights as soon as
-they began maneuvers. There was no point in letting the enemy see you before
-you saw them.
-
-Draco kicked his legs a few times, propelling him to a higher position from
-which he could gaze down at where his soldiers hovered in the water.
-
-The conversations died down almost at once under Draco's icy glare, his
-soldiers looking up at him with gratifying expressions of fear and worry.
-
-"Listen to me very carefully," said General Malfoy. His voice came out a little
-lower, a little burbly with bubbles, \emph{libsten to me vebwy caerbfully}, but
-the sound traveled clearly. "There's only one way we can win this. We've got to
-march on Sunshine together with Chaos, and beat Sunshine. \emph{Then} we fight
-it out with Potter and win. That's \emph{got} to happen, understand? No matter
-what else goes on, that part \emph{has} to happen that way\mbox{---}"
-
-And Draco explained the plan he and Harry had come up with.
-
-Astonished looks were exchanged among the soldiers.
-
-"---and if any of \emph{your} plots get in the way of that," finished Draco,
-"after we are out of the water, I will set you on \emph{fire}."
-
-There was a nervous chorus of yessirs.
-
-"And everyone with secret orders, make sure you carry them out \emph{to the
-letter,}" said Draco.
-
-Around half his soldiers \emph{openly nodded,} and Draco marked them for death
-after he rose to power.
-
-Of course all the private orders were fake, like one Dragon being told to offer
-a false traitor's commission to another Dragon, and the second Dragon being
-told in hushed confidence to report anything said by the first Dragon. Draco
-had told each Dragon that the whole war could depend on that one thing, and
-that he hoped they understood it was more important than the plans they'd
-previously made. With luck that would keep all the idiots happy, and maybe
-flush out a few spies to boot, if the reports didn't match the instructions.
-
-Draco's real plan for winning against Chaos{\el} well, it was simpler than
-the one he'd burned, but Father still wouldn't have liked it. Despite trying,
-though, Draco hadn't been able to think of anything better. It was a plot that
-couldn't \emph{possibly} have worked against anyone except Harry Potter. In
-fact it had \emph{been} Harry's plan originally, according to the traitor,
-though Draco had guessed that without being told. Draco and the traitor had
-just modified it a little{\el}
-\sbreak
-Harry took a deep breath, feeling the water gurgle harmlessly in his lungs.
-
-They'd fought in the forest, and he hadn't gotten a chance to say it.
-
-They'd fought in the corridors of Hogwarts, and he hadn't gotten a chance to
-say it.
-
-They'd fought in the air, broomsticks issued to every soldier, and it still
-hadn't made sense to say it.
-
-Harry had thought he wouldn't ever get to say those words, not while he was
-still young enough for them to be real{\el}
-
-The Chaos Legionnaires were looking at Harry in puzzlement, as their general
-swam with his feet pointing up toward the distant light of the surface, and his
-head pointed down toward the murky depths.
-
-"\emph{Why are you upside down?}" the young commander shouted at his army, and
-began to explain how to fight after you abandoned the privileged orientation of
-gravity.
-\sbreak
-A hollow, booming bell echoed through the water, and on the instant, Zabini and
-Anthony and five other soldiers struck out downward, into the murky depths of
-the lake. Parvati Patil, the only Gryffindor in the group, turned her head back
-for a moment and gave them all a cheery wave as she dived; and after a moment,
-Scott and Matt did the same. The rest just sank and vanished.
-
-General Granger swallowed a lump in her throat as she watched them go. She was
-risking everything on this, dividing her army instead of just trying to take as
-many enemy soldiers with them as possible.
-
-The thing to realize, Zabini had told her, was that no army would move until
-they had a plan that let them expect victory. Sunshine couldn't just plan to
-win themselves, they had to make both other armies \emph{think} they would win
-until it was too late.
-
-Ernie and Ron still looked like they were in shock. Susan was gazing after the
-disappearing soldiers with a calculating look. Her army, what was left of it,
-just looked bewildered, traceries of light dappling on their uniforms as they
-all drifted just below the sunlit surface of the lake.
-
-"\emph{Now} what?" said Ron.
-
-"Now we wait," said Hermione, loudly enough for all the soldiers to hear. It
-felt odd to talk with her mouth full of water, she kept feeling like she was
-committing some sort of horrible impoliteness at the dinner table and was about
-to drool all over herself. "All of us left here are going to get zapped, but
-that was going to happen anyway with Dragon and Chaos ganging up on us. We've
-just got to take as many of them with us as we can."
-
-"I've got a plan," said one of her Sunshine Soldiers{\el} Hannah, her voice
-had been a little hard to recognize at first. "It's like all complicated, but I
-know how we can get Dragon and Chaos to start fighting each other\mbox{---}"
-
-"Me too!" said Fay. "I've got a plan too! See, Neville Longbottom is secretly
-on our side\mbox{---}"
-
-"\emph{You} were talking to Neville?" said Ernie. "That's not right, \emph{I}
-was the one who\mbox{---}"
-
-Daphne Greengrass and a couple of other Slytherins who hadn't gone with Zabini
-were giggling helplessly as the cries of "No, wait, \emph{I} was the one who
-got Longbottom" erupted from one soldier after another.
-
-Hermione just looked at them all wearily.
-
-"Okay," said Hermione when it had all died down, "does everyone get it? All
-your plots were faked by the Chaos Legion, or maybe some by Dragon. Anyone who
-\emph{really} wanted to betray Harry or Malfoy went straight to me or Zabini,
-not you. Just go ahead and compare notes on all your secret plots and you'll
-see it for yourselves." She might not be as good at plotting as Zabini, but she
-could always understand what all her officers told her, that was why Professor
-Quirrell had made her the general. "So don't bother trying to do any plots when
-the other armies get here. Just fight, okay? Please?"
-
-"But," said Ernie with shock on his face, "Neville is in \emph{Hufflepuff!}
-You're saying he \emph{lied} to us?"
-
-Daphne was laughing so hard and so helplessly that the exhalations had turned
-her upside down in the water.
-
-"I'm not sure \emph{what} Longbottom is," said Ron darkly, "but I don't think
-he's a Hufflepuff any more. Not now that \emph{Harry Potter's} got to him."
-
-"Do you know," said Susan, "I \emph{asked} him that, and Neville told me he had
-become a Chaos Hufflepuff?"
-
-"\emph{Anyway}," said Hermione in a loud voice. "Zabini took with everyone who
-we thought was a spy, so in \emph{our} army we can stop watching each other
-quite so hard now, I hope."
-
-"\emph{Anthony} was a spy?" yelled Ron.
-
-"\emph{Parvati} was a spy?" gasped Hannah.
-
-"Parvati was \emph{totally} a spy," said Daphne. "She shopped at the spy shoe
-store and wore spy lipstick, and someday she's going to marry a nice spy
-husband and have a lot of little spies."
-
-And then a gong sound echoed through the water, indicating that Sunshine had
-just scored two points.
-
-This was shortly followed by the triple gong of Dragon losing a single point.
-
-Traitors weren't allowed to kill generals, not after the disaster of the first
-battle in December when all three generals had been shot in the first minute.
-But with any luck{\el}
-
-"Aw," said Hermione. "It sounds like Mr.~Crabbe is taking a little nap."
-\sbreak
-Like two shoals of fish, the armies swam along.
-
-Neville Longbottom kicked his feet in slow, measured motions. Diving, always
-diving in whatever direction you happened to be moving. You wanted to show the
-enemy the smallest profile, present them with your head or your feet. So you
-were always diving, downward and head-first, and the enemy was always
-\emph{down.}
-
-Like every Chaos Legionnaire in the army, Neville's head was constantly
-rotating as he swam, looking up, down, around, to every side. Not just watching
-for Sunshine Soldiers, but watching for any sign that a Chaos Legionnaire had
-drawn their wand and was about to betray them. Usually traitors waited until
-the confusion of battle to make their move, but that early gong had put them
-all on guard.
-
-{\el} the truth was, Neville was feeling sad about that. In November he'd
-been a soldier in a united army, all of them pulling together and helping each
-other, and now they were all watching each other constantly for the first signs
-of betrayal. It might have been more fun for General Chaos, but it wasn't
-nearly as much fun for Neville.
-
-The direction formerly known as `up' was getting steadily brighter, as they
-came closer to the surface and Sunshine.
-
-"Wands out," said General Chaos.
-
-Neville's squad drew their wands, pointing them straight ahead toward the
-enemy, as their heads scanned around more rapidly. If there were Sunny
-traitors, the time was approaching for them to strike.
-
-The other shoal of fish, Dragon Army, was doing the same thing.
-
-"\emph{Now!}" shouted the distant voice of the Dragon General.
-
-"\emph{Now!}" shouted General Chaos.
-
-"\emph{For Sunshine!}" shouted all the soldiers in both armies, and charged
-downward.
-\sbreak
-"\emph{What?}" said Minerva involuntarily as she watched the screens from next
-to the lake, a cry echoed in many other places; all of Hogwarts was watching
-this battle as they had watched the first.
-
-Professor Quirrell was laughing dryly. "I warned you, Headmaster. It is
-impossible to have rules without Mr.~Potter exploiting them."
-\sbreak
-For long precious seconds, as the forty-seven soldiers charged her own
-seventeen, Hermione's mind went blank.
-
-Why{\el}
-
-Then it all snapped into place.
-
-Every time a soldier originally from Sunshine got shot by someone crying the
-name of Sunshine, she would lose a Quirrell point. When two Sunshine Soldiers
-were shot by either army, \emph{both} enemy armies would be two points closer
-to overtaking her, it was the same gain only \emph{shared}. And if anyone shot
-another soldier \emph{not} in the name of Sunshine, that gong \emph{wouldn't}
-get lost in the confusion{\el}
-
-Hermione was suddenly very glad that Zabini hadn't gone with the obvious plan
-of starting trouble between the other two armies while they attacked Sunshine.
-
-It was still disheartening, though, that sense of your chances closing down, of
-hope being taken away.
-
-Most of Hermione's soldiers were still looking confused, but some had
-expressions of dawning horror as they got it.
-
-"It's all right," Susan Bones said firmly. Heads turned to look at the Sunshine
-Captain. "Our job is the same, to take as many of them with us as we can. And
-remember, Zabini took away all the spies! We don't have to stay on the lookout
-like \emph{they} do!" The girl was smiling defiantly, provoking answering
-smiles from many of the other soldiers, even from Hermione herself. "It can be
-like it was in November. We just have to keep our heads high, fight our best,
-and trust each other\mbox{---}"
-
-Daphne shot her.
-\sbreak
-"\emph{Blood for the blood god!}" shrieked Neville of Chaos, though since he
-was underwater it came out more like `Blubbled for the blubbled glub!'
-
-Captain Weasley spun and raised his wand toward Neville and fired. But Neville
-was swimming \emph{downward} toward him, wand pointed straight ahead, and that
-meant the Simple Shield could shelter Neville's entire profile; if anyone shot
-him now, it wasn't going to be Sunny Ron.
-
-A grimly determined look came over Captain Weasley's face, and he arrowed
-straight up toward Neville, mouthing the word \emph{Contego,} though the shield
-wasn't visible in the water.
-
-The two enemy champions shot toward each other like arrows released from bows,
-each aimed to split the other down the middle. They had dueled many times
-before, but this time would pay for all.
-
-(Far away by the lakeside, a hundred breaths were held.)
-
-"\emph{Rainbows and unicorns!}" roared the Sunshine Captain.
-
-"\emph{The Black Goat with a thousand young!}"
-
-"\emph{Do your homework!}"
-
-Closer and yet closer, the two champions charged, neither willing to swerve,
-the first person to turn would present a vulnerable broadside and get shot,
-though if neither lost their nerve they would crash right into each
-other{\el}
-
-Falling straight down as the enemy rose straight up to meet him, hammer
-descending to meet anvil in a path neither was willing to leave{\el}
-
-"\emph{Special attack, Chaotic Twist!}"
-
-Neville saw the look of horror on Captain Weasley's face as the Hover Charm
-caught him. They'd tested it before the battle had started; and just as Harry
-had suspected, \emph{Wingardium Leviosa} became a whole new sort of weapon once
-everyone was swimming underwater.
-
-"\emph{Curse you, Longbottom!}" shrieked Ron Weasley, "\emph{Can't you ever
-fight without your dumb special attacks}\mbox{---}"
-
-and by that time the Sunshine Captain had been spun around sideways and Neville
-shot him in the leg.
-
-"I don't fight fair," said Neville to the sleeping form, "I fight like Harry
-Potter."
-\sbreak
-\emph{Granger: 237 / Malfoy: 217 / Potter: 220}
-
-It still hurt every time he had to shoot Hermione. Harry could hardly stand to
-look at the expression of peace that had come over her sleeping face, arms now
-drifting aimlessly as the curves of sunlight moved over her camouflage uniform
-and the cloud of her chestnut hair.
-
-And if Harry had tried to duck out of being the one to shoot her{\el} not
-only would Draco have known what it meant, \emph{Hermione} would have been
-offended.
-
-\emph{She's not dead,} Harry said to his brain as his kicking feet pushed him
-away, \emph{she's just resting. IDIOT.}
-
-\emph{Are you sure?} said his brain. \emph{What if she's an ex-Hermione? Could
-we go back and check?}
-
-Harry glanced back briefly.
-
-\emph{See, she's fine, there are bubbles coming out of her mouth.}
-
-\emph{Could've been her last breath escaping.}
-
-\emph{Oh be quiet. Why are you being so paranoid-protective, anyway?}
-
-\emph{Er, first real friend we've ever had in our whole life? Hey, remember
-what happened to our pet rock?}
-
-\emph{Would you SHUT UP about that worthless lump of rubble, it wasn't even
-alive let alone sentient, that is like the most pathetic childhood trauma
-ever---}
-
-The two armies swiftly separated, becoming two shoals of fish once more.
-
-General Granger had gone down seventeen points, and taken three Chaotics and
-two Dragons with her; and one Chaotic and two Dragons had been shot as
-traitors. So she'd lost net seven points, Harry had lost one, Draco had lost
-two; that put Sunshine twenty points up on Dragon, and seventeen points up on
-Chaos. Chaos could still win easily if they exterminated all twenty remaining
-Dragons. The wild card, of course, being those seven remaining Sunshine
-Soldiers{\el}
-
-{\el} if you could call them that.
-
-The two shoals swam uneasily next to each other, the soldiers in each army
-awaiting an order to call out their true allegiances, and attack{\el}
-
-"Everyone who got them," Harry said loudly, "remember Special Orders One
-through Three. And don't forget it's Merlin Says on Three. Do not acknowledge."
-
-The trustworthy two-thirds of the army did not nod, and the other third just
-looked puzzled.
-
-\emph{Special Order One: Don't bother trying to call out any codewords in this
-battle, don't expend effort on any plot not specially approved by the
-commander; just swim, shield, and fire.}
-
-Hermione and Draco had both been fighting their soldiers, trying to get them to
-stop plotting on their own all through December. Harry had egged his soldiers
-on and supported their plotting through the last two battles{\el} while also
-telling them that at some \emph{future} point he might ask them to put a plot
-or two on hold, to which they'd all readily agreed. So now, in this critical
-battle, they were happy to obey.
-
-Neither Hermione or Draco could have given that order successfully, Harry was
-certain. It was the difference between your soldiers seeing you as an ally in
-their plotting, and seeing you as a spoilsport old fuddy-duddy who didn't want
-them to have any fun. Imposition of order equaled escalation of chaos, and it
-also worked in reverse{\el}
-
-"There they are!" shouted someone, and pointed.
-
-From the depths of the lake arose the forgotten ones, the ones who'd forsaken
-the last battle, the seven missing Sunshine Soldiers, glowing with the bright
-aura of cowards, now fading as they returned to battle.
-
-The two shoals of fish wavered, pointing wands uneasily.
-
-"Hold your fire!" shouted Harry, and a similar cry came from General Malfoy.
-
-There was a moment of held breath.
-
-Then the seven Sunshine Soldiers swam up to join Dragon Army.
-
-There was a triumphant cheer from Dragon Army.
-
-There were cries of dismay from a third of the Chaos Legion.
-
-Some of the other two-thirds smiled, though they shouldn't have.
-
-Harry wasn't smiling.
-
-\emph{Oh, this is so completely not going to work{\el}}
-
-But Harry hadn't been able to think of anything better.
-
-"Special Orders Two and Three still apply!" shouted Harry. "Fight!"
-
-"\emph{For the Chaos Legion!}" roared twenty Chaotic Legionnaires.
-
-"\emph{For Dragon Army!}" roared twenty Dragon Warriors and seven Sunshine
-Soldiers.
-
-And the Chaotics dived straight downward, as all the traitors got ready to
-strike.
-\sbreak
-\emph{Granger: 237 / Malfoy: 220 / Potter: 226}
-
-Draco's head darted around frantically, trying to weigh up what was happening;
-somehow, despite his greater forces, he'd \emph{lost the initiative.} Four
-small Chaotic forces were being pursued by four larger Dragon forces, but
-because Draco's forces were the ones trying to force an engagement, it meant
-that they had to \emph{follow} where Chaos \emph{ran,} and somehow that was
-producing concentrations of Chaotic force that would fire into the exposed
-sides of Dragon---
-
-It was happening \emph{again!}
-
-"\emph{Prismatis!}" shouted Draco, raising his wand, and that shield you could
-see even through the water, a sparkling multicolored flat wall wide enough to
-shield Draco and the five other Dragons with him from the Chaotic force that
-had just started firing on them as they swam past, and \emph{that} let the
-other five Dragons turn \emph{their} attentions back to the Chaotic force
-they'd been chasing---
-
-There was a tense moment as sleep spell after sleep spell crashed into Draco's
-Prismatic Wall, and Draco was hoping to Merlin that none of those four Chaotics
-had learned the Breaking Drill Hex---
-
-Then there was the bell of a Dragon victory, and the Chaotic force spun
-head-for-foot and began swimming away; and Draco, his hands now shaking
-slightly, dropped the Prismatic Wall and lowered his wand.
-
-Fighting in water was more exhausting even than fighting on broomsticks.
-
-"\emph{Do not pursue!}" Draco cried to his soldiers as they started to follow,
-then, "\emph{Sonorus! REFORM ON ME!}"
-
-The Dragon forces started converging on Draco, and the Chaotic forces spun
-around and began \emph{pursuing} the Dragons on the instant---Draco swore out
-loud as he heard the bell of a Chaotic victory, someone hadn't gotten their
-Simple Shield oriented right---and then the Dragon forces were in supporting
-range of each other and the Chaotics were moving back into the murky distance.
-
-Somehow, despite their numerical superiority, the Dragons had scored three
-times against the Chaotics and the Chaotics had scored four times back, and
-he'd heard one Dragon spy get executed. Either Harry Potter had thought of a
-lot of very good ideas very fast, or for some unimaginable reason he'd already
-spent a lot of time working out how to fight underwater. This wasn't working,
-and Draco needed to rethink things.
-
-It looked like everyone was having trouble aiming while swimming, too, the
-battle might last long enough that time would be called{\el} the distant
-underwater moon was only half full now, that wasn't good{\el} he had to
-rethink things \emph{fast{\el}}
-
-"What is it?" said Padma Patil, as she and her force swam over toward Draco.
-
-Padma was his second-in-command; she was clever and powerful, and better yet,
-she hated Granger and saw Harry as a rival, which made her \emph{trustworthy.}
-Working with Padma was making him realize the truth of the old adage that
-Ravenclaw was sister to Slytherin; Draco had been surprised when his father had
-told him it was an acceptable House for his future wife, but now he saw the
-sense of it.
-
-"Wait until we're all here," Draco said. The truth was, he needed to catch his
-breath. That was the trouble with being the general \emph{and} the most
-powerful wizard, you had to keep using magic.
-
-Zabini came in next, commanding a force of two Sunnies and four Dragons, one of
-whom was Gregory keeping an eye on Zabini. Draco didn't trust Zabini. And
-neither Draco nor Zabini trusted the Sunnies enough to make them a majority of
-any unit; they were \emph{supposed} to be loyal either to Draco directly, or to
-Granger who'd been fooled by the promise that the Dragons would be betrayed in
-the end after both forces had been depleted, just as Harry's more trusted
-Chaotics should've been fooled into not shooting at the Sunnies by the promise
-of their firing fake Sleep Hexes and switching to support Chaos later; but it
-was possible some of the Sunnies \emph{were} loyal to Chaos and \emph{weren't}
-firing real Sleep Hexes and that was why Dragon wasn't winning the way their
-numerical advantage should've let them win{\el}
-
-The next unit that approached was depleted, three soldiers holding wands on two
-other soldiers, who were swimming with empty hands.
-
-Draco gritted his teeth. More traitor problems. He needed to talk to Professor
-Quirrell about having some way to \emph{punish} traitors at least, conditions
-like these were \emph{unrealistic}, in real life you tortured your traitors to
-death.
-
-"General Malfoy!" shouted the commander of the problem unit as it swam up, a
-Ravenclaw boy named Terry. "We don't know what to do---Cesi shot Bogdan, but
-Cesi says Kellah told him that Bogdan shot Specter\mbox{---}"
-
-"I \emph{didn't!}" said Kellah.
-
-"Yes you \emph{did!}" shrieked Cesi. "General Malfoy, \emph{she's} the spy, I
-should've rea\mbox{---}"
-
-"\emph{Somnium,}" said Draco.
-
-There was the triple bell of a one-point loss from Dragon, and then Kellah's
-limp body began to float away in the water.
-
-Draco \emph{had} heard the word `recursion' by this point, and he knew a Harry
-Potter plot when he saw one.
-
-(Unfortunately Draco had \emph{not} heard of autoimmune disorders, and the
-thought did \emph{not} readily occur to him that a clever virus would begin its
-attack by creating symptoms of an autoimmune disorder so as to get the body to
-distrust its own immune system{\el})
-
-"\emph{General order!}" said Draco, raising his voice. "Nobody gets to shoot
-spies except myself, Gregory, Padma, and Terry. If anyone sees anything
-suspicious they come to one of \emph{us.}"
-
-And then---
-
-There was the bell of Sunshine scoring two points.
-
-"\emph{What?}" said Draco and Zabini around the same time; their heads swiveled
-around. No one seemed to have gotten hit, and all the Sunshine soldiers were
-present and accounted for. (Except Parvati, who had been shot by some
-still-unknown traitor in Padma's squad; and of course Padma had shot Parvati
-again in case she was faking, so it wasn't her{\el})
-
-"A Sunny traitor in Chaos?" said Zabini, sounding puzzled. "But all the ones I
-knew about were supposed to strike during Chaos's attack on Sunshine\mbox{---}"
-
-"No!" said Padma in a tone of sudden realization. "That was \emph{Chaos}
-executing a spy!"
-
-"\emph{What?}" said Zabini. "But why\mbox{---}"
-
-And Draco got it. \emph{Damn it!} "Because Potter thinks he's safe for how much
-he beats Sunshine, but not for how much he beats \emph{us!} So he doesn't want
-to lose a single point when he executes a traitor! \emph{General order!} If you
-have to execute a traitor, call Sunshine first! And don't forget to switch back
-to Dragon afterward\mbox{---}"
-\sbreak
-\emph{Granger: 253 / Malfoy: 252 / Potter: 252}
-
-Longbottom's body drifted chaotically through the water, arms and legs
-disarrayed. After Draco had finally got a hit in they'd all shot him
-\emph{again} just to be sure.
-
-Nearby was Harry Potter, now protected by a Prismatic Sphere, looking at them
-all grimly as the last sliver of crescent moon slowly diminished, somewhere far
-away. If Longbottom had managed to shoot one more soldier (Draco knew Harry was
-thinking), if the two Chaotics had managed to hold out just a little longer,
-they might have \emph{won}{\el}
-
-After Draco had reformed his forces and struck out again, the ensuing battle
-and execution of spies in Sunshine's name had left Sunshine exactly one point
-ahead of Dragon and Chaos both. Once Harry had started doing it, Draco had been
-left with no choice but to follow suit.
-
-But now they had General Chaos outnumbered three to one, the survivors of
-Dragon Army and the last remaining Sunny traitor: Draco, and Padma, and Zabini.
-
-And Draco, who was no fool, had ordered Padma to take Zabini's wand after
-Longbottom had shot Gregory and fallen in turn to Draco. The boy had given him
-an insulted look, told Draco that he owed him for this, and handed it over.
-
-That left Draco and Padma to take down General Chaos.
-
-"I don't suppose you'd like to surrender?" said Draco, smiling as evilly as any
-smile he'd ever directed at Harry Potter.
-
-"Sleep before surrender!" shouted General Chaos.
-
-"Just so you know," said Draco, "Zabini doesn't actually \emph{have} an older
-sister for you to rescue from Gryffindor bullies. But Zabini \emph{does} have a
-mother who doesn't approve of Muggleborns like Granger, and I wrote her a few
-notes, and offered Zabini a few favors---nothing involving my father, just
-things \emph{I} can do in school. And by the way, Zabini's mother doesn't
-approve of the Boy-Who-Lived, either. Just in case you still thought Zabini was
-really on your side."
-
-Harry's face grew even grimmer.
-
-Draco raised his wand, and began breathing rhythmically, building up strength
-for a Breaking Drill Hex. Granger's Prismatic Sphere was almost as strong as
-Draco's now, and Harry's wasn't much weaker, where did those two find
-\emph{time?}
-
-"\emph{Lagann!}" spoke Draco, putting everything he had into it, and the green
-spiral blazed out and Harry's shield shattered, and at almost the same moment---
-
-"\emph{Somnium!}" said Padma.
-\sbreak
-\emph{Granger: 253 / Malfoy: 252 / Potter: 254}
-
-Harry let out a long breath of relief, and not just because he didn't have to
-hold the Prismatic Sphere any more. His hand was shaking as he lowered his wand.
-
-"You know," said Harry, "I was pretty worried there for a moment."
-
-\emph{Special Order Two: If a Sunny traitor doesn't seem to be really shooting
-at you, fake being hit occasionally. Prefer targeting Dragons to Sunnies but go
-ahead and shoot Sunnies if you can't shoot Dragons.}
-
-\emph{Special Order Three: Merlin says do not shoot at Blaise Zabini or either
-Patil twin.}
-
-With a wide grin, Parvati Patil stripped the Transfigured patch off her
-uniform's insignia, and let it float away in the water.
-
-"Gryffindors for Chaos," she said, and handed Zabini his wand back.
-
-"Thank you \emph{very} much," Harry said, and bowed sweepingly to the
-Gryffindor girl. "And thank \emph{you} as well," bowing to Zabini. "You know,
-when you came to me with that plan, I wondered if you were brilliant or crazy,
-and I've decided that you're both. And by the way," Harry said, now turning as
-though to address Draco's body, "Zabini \emph{does} have a cousin\mbox{---}"
-
-"\emph{Somnium,}" said Zabini's voice.
-\sbreak
-\emph{Granger: 255 / Malfoy: 252 / Potter: 254}
-
-And Harry Potter's body floated away, his expression of shock and horror
-quickly relaxing into sleep.
-
-"On second thought," Parvati said cheerfully, "make that Gryffindors for
-Sunshine."
-
-She started to laugh, more exhilarated than she'd ever been in her life, she'd
-\emph{finally} gotten to assassinate and replace her twin sister and she'd
-wanted to do that since \emph{forever,} and this had been \emph{perfect,} it
-had all been \emph{perfect}---
-
----and then her wand spun around in a lightning motion just as Zabini's wand
-turned to point at her.
-
-"Wait!" said Zabini. "Do not shoot, do not resist. That's an order."
-
-"\emph{What?}" said Parvati.
-
-"Sorry," said Zabini, looking not-quite-sincerely apologetic, "but I can't be
-totally \emph{sure} you're for Sunshine. So I order you to let me shoot you."
-
-"\emph{Hold on!}" said Parvati. "We're only ahead of Chaos by one point! If you
-shoot me now\mbox{---}"
-
-"I'll shoot you in the name of Dragon, \emph{obviously}," said Zabini, now
-sounding a little superior. "Just because we tricked \emph{them} into doing it,
-doesn't mean it won't work for us."
-
-Parvati stared at him, her eyes narrowing. "General Malfoy said your mother
-doesn't like Hermione."
-
-"I suppose," said Zabini, still with that superior smirk. "But some of us are
-more willing than Draco Malfoy to annoy a parent."
-
-"And Harry Potter said you have a cousin\mbox{---}"
-
-"Nope," said Zabini.
-
-Parvati stared at him, trying to think, but she wasn't really good at plotting;
-Zabini'd said the plan was to secretly keep the scores of Chaos and Dragon as
-even as possible so they'd use Sunshine's name to execute their traitors
-instead of losing even a single point, and that had \emph{worked}{\el}
-but{\el} she had the feeling she was missing something, she wasn't a
-Slytherin{\el}
-
-"Why don't \emph{I} shoot \emph{you} in the name of Dragon?" said Parvati.
-
-"Because I outrank you," said Zabini.
-
-Parvati had a bad feeling about this.
-
-She stared at him for a long moment.
-
-And then---
-
-"\emph{Somni}\mbox{---}" she started to say, and then realized she hadn't said \emph{for
-Dragon,} and frantically cut herself off---
-\sbreak
-\emph{Granger: 255 / Malfoy: 254 / Potter: 254}
-
-"Hey, everyone," said Blaise Zabini's face on the screens, looking quite
-amused, "guess it's all down to me."
-
-All by the lakeside, people were holding their breath.
-
-Sunshine was ahead of Dragon and Chaos by exactly one point.
-
-Blaise Zabini could shoot himself in the name of either Dragon or Chaos, or
-just leave things the way they were.
-
-A series of chimes indicated that the last minute of time was running out.
-
-And the Slytherin was smiling a strange, twisted smile, and casually toying
-with his wand, the dark wood barely visible in the dark water.
-
-"You know," said Blaise Zabini's voice, in the tones of someone who'd been
-rehearsing the words for a while, "it's just a game, really. And games are
-supposed to be \emph{fun.} So how about if I just do whatever I feel like?"
