@@ -8,41 +8,39 @@
 %
 % First we calculate the current page number modulo 4:
 \makeatletter
-\@tempcnta=\c@sheetsequence% The sheetsequence counter defined by the memoir class
-\newcount\blobb
-\blobb=\c@sheetsequence
-\divide\@tempcnta by 4
-\multiply\@tempcnta by 4
-\multiply\@tempcnta by -1
-\advance\@tempcnta by \c@sheetsequence
+\@tempcnta=\c@sheetsequence% The sheetsequence counter defined by the memoir
+class
+\newcount\blobb \blobb=\c@sheetsequence \divide\@tempcnta by 4
+\multiply\@tempcnta by 4 \multiply\@tempcnta by -1 \advance\@tempcnta by
+\c@sheetsequence
 %
-% Now @tempcnta holds @sheetsequence % 4. We will add pages and increment @tempcnta
-% until it reaches 4 (unless it is 0, in which case there is no page to add).
+% Now @tempcnta holds @sheetsequence % 4. We will add pages and increment
+% @tempcnta until it reaches 4 (unless it is 0, in which case there is no page
+% to add).
 \ifnum\@tempcnta>0
 \loop
 \thispagestyle{empty}% Disable headers/footers
-\null% There must be "something" on the current page for \newpage to have an effect
+\null% There must be "something" on the current page for \newpage to have an
+effect
 \newpage% Make new page
-\advance\@tempcnta by 1
-\ifnum\@tempcnta<4
+\advance\@tempcnta by 1 \ifnum\@tempcnta<4
 \repeat
 \fi
 \makeatother
 %
 % Now the current page is a muliple of 4. We put the colophon here.
 {\null\vfil%
-\thispagestyle{empty}\noindent\rightskip=0pt plus 1fil\leftskip=0pt plus 1fil\parfillskip=0pt%
-\vbox{
-\parshape 1 0em 21em
+\thispagestyle{empty}\noindent\rightskip=0pt plus 1fil\leftskip=0pt plus
+1fil\parfillskip=0pt%
+\vbox{ \parshape 1 0em 21em
 \noindent
-\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil{}\emph{
-Dieses Buch wurde von Fans der Geschichte formatiert. Der Text wurde in
-10½~Punkt URW~Garamond~No.~8 geschrieben. Die Parseltongue wurde in Alegreya
-Sans Light Italic von Huerta Tipografica geschrieben. Die Kapitelüberschriften
-wurden in Lumos von Sarah McFalls geschrieben, inspiriert von der Schriftart,
-die in den US-Ausgaben der Harry-Potter-Bücher verwendet wird. Das Cover wurde
-von \CoverAuthor erstellt. Der Schriftsatz erfolgte mit \emph{\LaTeX}; der
-Quellcode kann unter \mbox{\url{\PdfSourceUrl}} gefunden werden. Dieses Buch
-wurde am \today{} erstellt.}}\vskip\footskip%
-\vfil\vfil
-\newpage }
+\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil{}\emph{Dieses Buch wurde
+von Fans der Geschichte formatiert. Der Text wurde in 10½~Punkt
+URW~Garamond~No.~8 geschrieben. Die Parseltongue wurde in Alegreya Sans Light
+Italic von Huerta Tipografica geschrieben. Die Kapitelüberschriften wurden in
+Lumos von Sarah McFalls geschrieben, inspiriert von der Schriftart, die in den
+US-Ausgaben der Harry-Potter-Bücher verwendet wird. Das Cover wurde von
+\CoverAuthor{} erstellt. Der Schriftsatz erfolgte mit \emph{\LaTeX}; der Quellcode
+kann unter \mbox{\url{\PdfSourceUrl}} gefunden werden. Dieses Buch wurde am
+\today{} erstellt.}}\vskip\footskip%
+\vfil\vfil \newpage }
