@@ -1,0 +1,27 @@
+sed -i '' 's/</p>/\\underline{/g' hpmor-chapter-099.tex
+sed -i '' 's/<ins>/\\underline{/g' hpmor-chapter-099.tex
+sed -i '' 's/<\/ins>/}/g' hpmor-chapter-099.tex
+sed -i '' 's/<strong>/\\textbf{/g' hpmor-chapter-099.tex
+sed -i '' 's/<\/strong>/}/g' hpmor-chapter-099.tex
+sed -i '' 's/<span>//g' hpmor-chapter-099.tex
+sed -i '' 's/<\/span>//g' hpmor-chapter-099.tex
+sed -i '' 's/<br \/>/\n/g' hpmor-chapter-099.tex
+sed -i '' 's/<br\/>/\n/g' hpmor-chapter-099.tex
+sed -i '' 's/&quot;/"/g' hpmor-chapter-099.tex
+sed -i '' 's/<em>/\\emph{/g' hpmor-chapter-099.tex
+sed -i '' 's/<\/em>/}/g' hpmor-chapter-099.tex
+sed -i '' 's/ "/ \\glqq /g' hpmor-chapter-099.tex
+sed -i '' 's/{"/{\\glqq /g' hpmor-chapter-099.tex
+sed -i '' 's/^"/\\glqq /g' hpmor-chapter-099.tex
+sed -i '' 's/" /\\grqq{} /g' hpmor-chapter-099.tex
+sed -i '' 's/",/\\grqq{},/g' hpmor-chapter-099.tex
+sed -i '' 's/"}/\\grqq{} }/g' hpmor-chapter-099.tex
+sed -i '' 's/"./\\grqq{}./g' hpmor-chapter-099.tex
+sed -i '' 's/"\$/\\grqq{}/g' hpmor-chapter-099.tex
+sed -i '' 's/%/\\%/g' hpmor-chapter-099.tex
+sed -i '' 's/^ //g' hpmor-chapter-099.tex
+
+
+
+
+
